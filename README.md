@@ -59,8 +59,8 @@ liquidez-bitcoin/
 | 25 | Dólar & Risco | Ouro | Yahoo Finance |
 | 26 | Liquidez Cripto | Supply de Stablecoins | DefiLlama |
 | 27 | Liquidez Cripto | Fluxo Líquido ETFs Spot BTC | Farside Investors |
-| 28 | Liquidez Cripto | Funding Rate Médio | Bybit |
-| 29 | Liquidez Cripto | Open Interest Futuros BTC | Bybit |
+| 28 | Liquidez Cripto | Funding Rate Médio | OKX |
+| 29 | Liquidez Cripto | Open Interest Futuros BTC | OKX |
 | 30 | Liquidez Cripto | Fear & Greed Cripto | Alternative.me |
 
 **Nota sobre indicadores marcados "Manual"/"Calculado":** balanço do PBoC, M2

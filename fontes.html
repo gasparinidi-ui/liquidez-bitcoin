@@ -45,6 +45,15 @@
 
     <div class="section" style="padding:0 0 20px;">
       <div class="panel">
+        <h4>Sobre o fluxo de ETFs (atualização manual)</h4>
+        <p class="small">
+          A Farside Investors protege a página com Cloudflare, que bloqueia requisições automatizadas mesmo com cabeçalhos de navegador — isso é comum em sites que querem evitar scraping em massa. Para manter o pipeline 100% gratuito, esse indicador fica marcado como atualização manual: confira o valor mais recente direto em
+          <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">farside.co.uk/btc</a>
+          e, se quiser, atualize <code>data_live.json</code> manualmente com a chave <code>btc_etf_netflow</code>.
+        </p>
+      </div>
+
+      <div class="panel">
         <h4>Fontes de dados</h4>
         <div class="table-wrap">
           <table>
@@ -55,8 +64,8 @@
               <tr><td><span class="operator">BIS Data Portal</span></td><td>Credit Impulse Global</td><td>Download CSV livre</td><td>Não</td></tr>
               <tr><td><span class="operator">Yahoo Finance</span> (yfinance)</td><td>DXY, VIX, MOVE, Ouro</td><td>~2.000 req/hora</td><td>Não</td></tr>
               <tr><td><span class="operator">DefiLlama API</span></td><td>Supply de stablecoins</td><td>Sem limite documentado</td><td>Não</td></tr>
-              <tr><td><span class="operator">Farside Investors</span></td><td>Fluxos diários de ETFs spot BTC</td><td>Página pública (scraping da tabela)</td><td>Não</td></tr>
-              <tr><td><span class="operator">Bybit Public API</span></td><td>Funding rate e open interest de futuros BTC</td><td>Alto (uso público, sem key)</td><td>Não</td></tr>
+              <tr><td><span class="operator">Farside Investors</span></td><td>Fluxos diários de ETFs spot BTC</td><td>Bloqueia scraping automatizado (Cloudflare) — atualização manual</td><td>Não</td></tr>
+              <tr><td><span class="operator">OKX Public API</span></td><td>Funding rate e open interest de futuros BTC</td><td>Alto (uso público, sem key)</td><td>Não</td></tr>
               <tr><td><span class="operator">Alternative.me</span></td><td>Índice Fear &amp; Greed cripto</td><td>Sem limite documentado</td><td>Não</td></tr>
               <tr><td><span class="operator">US Treasury FiscalData</span></td><td>Treasury General Account (TGA)</td><td>Sem limite documentado</td><td>Não</td></tr>
             </tbody>

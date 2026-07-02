@@ -48,8 +48,8 @@ const INDICATORS = [
   // ── F. LIQUIDEZ ESPECÍFICA DE CRIPTO (5) ─────────────────────────
   { id: 'stablecoin_supply', name: 'Supply Total de Stablecoins', cat: 'liquidez-cripto', unit: 'US$ bi', source: 'DefiLlama API', freq: 'Diária' },
   { id: 'btc_etf_netflow', name: 'Fluxo Líquido ETFs Spot BTC', cat: 'liquidez-cripto', unit: 'US$ mi/dia', source: 'Farside Investors', freq: 'Diária' },
-  { id: 'btc_funding_rate', name: 'Funding Rate Médio (Perpétuos BTC)', cat: 'liquidez-cripto', unit: '% (8h)', source: 'Bybit Public API', freq: 'A cada 8h' },
-  { id: 'btc_open_interest', name: 'Open Interest Futuros BTC', cat: 'liquidez-cripto', unit: 'US$ bi', source: 'Bybit Public API', freq: 'Horária' },
+  { id: 'btc_funding_rate', name: 'Funding Rate Médio (Perpétuos BTC)', cat: 'liquidez-cripto', unit: '% (8h)', source: 'OKX Public API', freq: 'A cada 8h' },
+  { id: 'btc_open_interest', name: 'Open Interest Futuros BTC', cat: 'liquidez-cripto', unit: 'US$ bi', source: 'OKX Public API', freq: 'Horária' },
   { id: 'fear_greed_index', name: 'Índice Fear & Greed Cripto', cat: 'liquidez-cripto', unit: '0-100', source: 'Alternative.me API', freq: 'Diária' },
 ];
 

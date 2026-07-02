@@ -146,6 +146,12 @@ def fetch_okx_open_interest():
 
 
 # ── Farside Investors (fluxo diário de ETFs spot BTC) ────────────────────
+# NOTA: a Farside protege a página com Cloudflare, que bloqueia requisições
+# automatizadas (mesmo com headers de navegador) — inclusive nos runners do
+# GitHub Actions. Mantemos a função pronta (útil se você rodar localmente
+# na sua própria máquina/IP residencial, onde costuma funcionar), mas ela
+# não é chamada em build_metrics() por padrão — o indicador fica como
+# atualização manual. Veja fontes.html para o link direto.
 FARSIDE_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -220,7 +226,7 @@ def build_metrics():
 
     # F. Liquidez Cripto
     metrics["stablecoin_supply"] = safe_call(fetch_stablecoin_supply)
-    metrics["btc_etf_netflow"] = safe_call(fetch_btc_etf_netflow)
+    metrics["btc_etf_netflow"] = None  # Farside bloqueia scraping automatizado (Cloudflare) — ver fontes.html
     metrics["btc_funding_rate"] = safe_call(fetch_okx_funding_rate)
     metrics["btc_open_interest"] = safe_call(fetch_okx_open_interest)
     metrics["fear_greed_index"] = safe_call(fetch_fear_greed)
