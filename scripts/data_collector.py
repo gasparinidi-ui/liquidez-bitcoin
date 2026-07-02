@@ -107,52 +107,60 @@ def fetch_fear_greed():
     return {"value": latest, "change_pct": change_pct, "as_of": as_of}
 
 
-# ── Bybit (funding rate + open interest, sem restrição geográfica) ──────
-def fetch_bybit_funding_rate():
+# ── OKX (funding rate + open interest, sem bloqueio geográfico) ────────
+def fetch_okx_funding_rate():
     r = requests.get(
-        "https://api.bybit.com/v5/market/funding/history",
-        params={"category": "linear", "symbol": "BTCUSDT", "limit": 2},
+        "https://www.okx.com/api/v5/public/funding-rate",
+        params={"instId": "BTC-USDT-SWAP"},
         headers=HEADERS, timeout=20,
     )
     r.raise_for_status()
-    rows = r.json().get("result", {}).get("list", [])
+    rows = r.json().get("data", [])
     if not rows:
         return None
     latest = float(rows[0]["fundingRate"]) * 100
-    prev = float(rows[1]["fundingRate"]) * 100 if len(rows) > 1 else None
-    change_pct = round(latest - prev, 4) if prev is not None else None
-    as_of = datetime.fromtimestamp(int(rows[0]["fundingRateTimestamp"]) / 1000, tz=timezone.utc).strftime("%Y-%m-%d %H:%M")
-    return {"value": round(latest, 4), "change_pct": change_pct, "as_of": as_of}
+    as_of = datetime.fromtimestamp(int(rows[0]["fundingTime"]) / 1000, tz=timezone.utc).strftime("%Y-%m-%d %H:%M")
+    return {"value": round(latest, 4), "change_pct": None, "as_of": as_of}
 
 
-def fetch_bybit_open_interest():
+def fetch_okx_open_interest():
     r = requests.get(
-        "https://api.bybit.com/v5/market/open-interest",
-        params={"category": "linear", "symbol": "BTCUSDT", "intervalTime": "1h", "limit": 2},
+        "https://www.okx.com/api/v5/public/open-interest",
+        params={"instId": "BTC-USDT-SWAP"},
         headers=HEADERS, timeout=20,
     )
     r.raise_for_status()
-    rows = r.json().get("result", {}).get("list", [])
+    rows = r.json().get("data", [])
     if not rows:
         return None
-    latest_btc = float(rows[0]["openInterest"])
-    # Preço aproximado via ticker para converter para USD
+    oi_ccy = float(rows[0]["oiCcy"])  # em BTC
     tick = requests.get(
-        "https://api.bybit.com/v5/market/tickers",
-        params={"category": "linear", "symbol": "BTCUSDT"},
+        "https://www.okx.com/api/v5/market/ticker",
+        params={"instId": "BTC-USDT-SWAP"},
         headers=HEADERS, timeout=20,
     ).json()
-    price = float(tick["result"]["list"][0]["lastPrice"])
-    value_bi = round(latest_btc * price / 1e9, 3)
+    price = float(tick["data"][0]["last"])
+    value_bi = round(oi_ccy * price / 1e9, 3)
     as_of = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     return {"value": value_bi, "change_pct": None, "as_of": as_of}
 
 
 # ── Farside Investors (fluxo diário de ETFs spot BTC) ────────────────────
+FARSIDE_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Referer": "https://farside.co.uk/",
+}
+
+
 def fetch_btc_etf_netflow():
     import pandas as pd
+    import io
 
-    tables = pd.read_html("https://farside.co.uk/btc/", header=0)
+    r = requests.get("https://farside.co.uk/btc/", headers=FARSIDE_HEADERS, timeout=20)
+    r.raise_for_status()
+    tables = pd.read_html(io.StringIO(r.text), header=0)
     df = next((t for t in tables if "Total" in t.columns), None)
     if df is None or df.empty:
         return None
@@ -213,8 +221,8 @@ def build_metrics():
     # F. Liquidez Cripto
     metrics["stablecoin_supply"] = safe_call(fetch_stablecoin_supply)
     metrics["btc_etf_netflow"] = safe_call(fetch_btc_etf_netflow)
-    metrics["btc_funding_rate"] = safe_call(fetch_bybit_funding_rate)
-    metrics["btc_open_interest"] = safe_call(fetch_bybit_open_interest)
+    metrics["btc_funding_rate"] = safe_call(fetch_okx_funding_rate)
+    metrics["btc_open_interest"] = safe_call(fetch_okx_open_interest)
     metrics["fear_greed_index"] = safe_call(fetch_fear_greed)
 
     return metrics
