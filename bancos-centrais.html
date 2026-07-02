@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bancos Centrais · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="bancos-centrais">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>🏛️ Bancos Centrais</h2>
+        <p>A fonte primária de liquidez global: os balanços e ferramentas de política monetária do Fed, BCE, BoJ e PBoC. Expansão desses balanços tende a preceder rallies de Bitcoin em 8–12 semanas.</p>
+        <div class="meta-row">
+          <span class="chip">7 indicadores</span>
+          <span class="chip">Atualização semanal/diária</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Balanço do Fed (WALCL)</h3>
+        <div class="metric" data-metric="fed_balance_sheet" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Liquidez Líquida do Fed</h3>
+        <div class="metric" data-metric="fed_net_liquidity" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Reverse Repo (RRP)</h3>
+        <div class="metric" data-metric="reverse_repo" data-unit="US$ bi"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Treasury General Account</h3>
+        <div class="metric" data-metric="tga_balance" data-unit="US$ bi"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Balanço do BCE</h3>
+        <div class="metric" data-metric="ecb_balance_sheet" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Balanço do BoJ</h3>
+        <div class="metric" data-metric="boj_balance_sheet" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Balanço do PBoC</h3>
+        <div class="metric" data-metric="pboc_balance_sheet" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">Todos os balanços são convertidos para USD à taxa de câmbio do dia. A "Liquidez Líquida do Fed" segue a fórmula popularizada por analistas de macro cripto: WALCL − TGA − RRP, um proxy do dinheiro efetivamente disponível para ativos de risco.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>Balanço do Fed</td><td><span class="source-pill">FRED · WALCL</span></td><td>Semanal</td></tr>
+              <tr><td>Liquidez Líquida do Fed</td><td><span class="source-pill">Calculado (FRED)</span></td><td>Semanal</td></tr>
+              <tr><td>Reverse Repo</td><td><span class="source-pill">FRED · RRPONTSYD</span></td><td>Diária</td></tr>
+              <tr><td>TGA</td><td><span class="source-pill">FRED · WTREGEN</span></td><td>Semanal</td></tr>
+              <tr><td>Balanço do BCE</td><td><span class="source-pill">FRED · ECBASSETSW</span></td><td>Semanal</td></tr>
+              <tr><td>Balanço do BoJ</td><td><span class="source-pill">FRED · JPNASSETS</span></td><td>Mensal</td></tr>
+              <tr><td>Balanço do PBoC</td><td><span class="source-pill">PBoC (manual)</span></td><td>Mensal</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

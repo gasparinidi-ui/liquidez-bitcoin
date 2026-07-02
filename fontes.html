@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fontes &amp; Metodologia · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="fontes">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes" class="active">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>📚 Fontes &amp; Metodologia</h2>
+        <p>Todas as fontes usadas neste painel são gratuitas e públicas. Nenhuma API paga é necessária para rodar o pipeline completo.</p>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0 0 20px;">
+      <div class="panel">
+        <h4>Fontes de dados</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Fonte</th><th>Cobertura</th><th>Limite gratuito</th><th>Precisa de chave?</th></tr></thead>
+            <tbody>
+              <tr><td><span class="operator">FRED</span> (St. Louis Fed)</td><td>Balanços de BC, juros, M2, spreads</td><td>Ilimitado (uso razoável)</td><td>Sim — grátis e instantânea</td></tr>
+              <tr><td><span class="operator">ECB Data Portal (SDW)</span></td><td>Balanço do BCE, M3 Zona do Euro</td><td>Download CSV/SDMX livre</td><td>Não</td></tr>
+              <tr><td><span class="operator">BIS Data Portal</span></td><td>Credit Impulse Global</td><td>Download CSV livre</td><td>Não</td></tr>
+              <tr><td><span class="operator">Yahoo Finance</span> (yfinance)</td><td>DXY, VIX, MOVE, Ouro</td><td>~2.000 req/hora</td><td>Não</td></tr>
+              <tr><td><span class="operator">DefiLlama API</span></td><td>Supply de stablecoins</td><td>Sem limite documentado</td><td>Não</td></tr>
+              <tr><td><span class="operator">Farside Investors</span></td><td>Fluxos diários de ETFs spot BTC</td><td>Página pública (scraping da tabela)</td><td>Não</td></tr>
+              <tr><td><span class="operator">Bybit Public API</span></td><td>Funding rate e open interest de futuros BTC</td><td>Alto (uso público, sem key)</td><td>Não</td></tr>
+              <tr><td><span class="operator">Alternative.me</span></td><td>Índice Fear &amp; Greed cripto</td><td>Sem limite documentado</td><td>Não</td></tr>
+              <tr><td><span class="operator">US Treasury FiscalData</span></td><td>Treasury General Account (TGA)</td><td>Sem limite documentado</td><td>Não</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h4>Arquitetura de atualização (custo zero)</h4>
+        <p class="small">
+          Este site é 100% estático (HTML/CSS/JS) e não roda servidor. Os dados "ao vivo" são publicados assim:
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Etapa</th><th>O que faz</th></tr></thead>
+            <tbody>
+              <tr><td>1. GitHub Actions (cron)</td><td>Roda <code>scripts/data_collector.py</code> a cada hora (ou com a frequência que preferir), buscando os 30 indicadores nas fontes acima.</td></tr>
+              <tr><td>2. Commit automático</td><td>O script grava <code>data_live.json</code> e o workflow faz commit direto no repositório.</td></tr>
+              <tr><td>3. Hospedagem estática</td><td>Vercel, Netlify, GitHub Pages ou Cloudflare Pages servem os arquivos — qualquer um dos planos gratuitos serve.</td></tr>
+              <tr><td>4. Leitura no navegador</td><td><code>assets/data_loader.js</code> busca <code>data_live.json</code> a cada carregamento de página e preenche os valores.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="margin-top:10px;">
+          <strong>Frequência máxima gratuita:</strong> em repositórios públicos, o GitHub Actions tem minutos ilimitados — o cron pode rodar a cada 5–15 minutos sem custo. O limite prático é a própria frequência de publicação de cada fonte: a maioria dos dados macro (Fed, BCE, M2) só muda 1x por dia ou por semana; os dados de liquidez cripto (funding rate, stablecoins, ETF flow) fazem sentido em intervalos de 15–60 minutos.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h4>Como publicar (passo a passo)</h4>
+        <ol style="padding-left:18px; color:var(--text); font-size:13px; line-height:1.9;">
+          <li>Crie um repositório público no GitHub e suba esta pasta inteira.</li>
+          <li>Obtenha uma chave gratuita do FRED em <span class="source-pill">fredaccount.stlouisfed.org/apikeys</span> (aprovação instantânea).</li>
+          <li>No repositório: <em>Settings → Secrets and variables → Actions</em> → adicione o secret <code>FRED_API_KEY</code>.</li>
+          <li>O workflow <code>.github/workflows/update-data.yml</code> já está configurado para rodar de hora em hora e commitar <code>data_live.json</code>.</li>
+          <li>Conecte o repositório à Vercel (ou Netlify/Cloudflare Pages) — deploy automático a cada commit, plano gratuito.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI — apenas para fins informativos. Não constitui recomendação de investimento.</div>
+  </main>
+</div>
+</body>
+</html>

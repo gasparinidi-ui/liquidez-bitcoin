@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liquidez Cripto · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="liquidez-cripto">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto" class="active">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>₿ Liquidez Cripto</h2>
+        <p>A liquidez macro chega ao Bitcoin através destes canais diretos: cunhagem de stablecoins, fluxo de ETFs spot, alavancagem em derivativos e sentimento de mercado. É aqui que a liquidez global vira compra ou venda real de BTC.</p>
+        <div class="meta-row">
+          <span class="chip">5 indicadores</span>
+          <span class="chip">O canal mais direto</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Supply Total de Stablecoins</h3>
+        <div class="metric" data-metric="stablecoin_supply" data-unit="US$ bi"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Fluxo Líquido ETFs Spot BTC</h3>
+        <div class="metric" data-metric="btc_etf_netflow" data-unit="US$ mi/dia"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Funding Rate Médio (Perpétuos)</h3>
+        <div class="metric" data-metric="btc_funding_rate" data-unit="% (8h)"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Open Interest Futuros BTC</h3>
+        <div class="metric" data-metric="btc_open_interest" data-unit="US$ bi"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Índice Fear &amp; Greed Cripto</h3>
+        <div class="metric" data-metric="fear_greed_index" data-unit="0-100"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">Funding rate e open interest são médias dos principais pares perpétuos de BTC. O supply de stablecoins agrega USDT, USDC, DAI e demais dólares tokenizados — um proxy direto de "pólvora seca" disponível para compra de cripto.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>Supply de Stablecoins</td><td><span class="source-pill">DefiLlama API</span></td><td>Diária</td></tr>
+              <tr><td>Fluxo ETFs Spot BTC</td><td><span class="source-pill">Farside Investors</span></td><td>Diária</td></tr>
+              <tr><td>Funding Rate</td><td><span class="source-pill">Bybit Public API</span></td><td>A cada 8h</td></tr>
+              <tr><td>Open Interest</td><td><span class="source-pill">Bybit Public API</span></td><td>Horária</td></tr>
+              <tr><td>Fear &amp; Greed</td><td><span class="source-pill">Alternative.me API</span></td><td>Diária</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

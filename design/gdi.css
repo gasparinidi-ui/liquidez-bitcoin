@@ -1,0 +1,560 @@
+/* ═══════════════════════════════════════════════════════════════
+   GDI Design System — gdi.css
+   Versão unificada · autocontida · sem dependências externas
+   Cobre: homepage, layout sidebar, trading desk, monitor, tabelas,
+          cards, painéis, botões, chips, hero, footer, responsivo.
+   Uso: <link rel="stylesheet" href="../design/gdi.css">
+        (ajuste o caminho relativo conforme a profundidade do subsite)
+══════════════════════════════════════════════════════════════ */
+
+/* ── Fontes ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&display=swap');
+
+/* ── Tokens de design ───────────────────────────────────────── */
+:root {
+  /* Fundos */
+  --bg:         #f4f6fa;
+  --surface:    #ffffff;
+  --surface-2:  #f0f5ff;
+  --panel:      #ffffff;    /* alias para surface — usado no trading desk */
+  --panel-2:    #f8fafd;
+
+  /* Bordas */
+  --border:     #d8e0ec;
+  --line:       #d8e0ec;    /* alias para border — usado no monitor */
+  --line-soft:  #e8eef8;
+
+  /* Texto */
+  --text:       #111928;
+  --muted:      #5a6878;
+  --label:      #1b2a4a;
+
+  /* Semânticos */
+  --green:      #16a34a;
+  --red:        #dc2626;
+  --blue:       #253d6e;
+  --amber:      #d97706;
+
+  /* Accent (indigo — usado no trading desk) */
+  --accent:        rgba(99,102,241,.08);
+  --accent-border: rgba(99,102,241,.20);
+  --accent-solid:  #6366f1;
+  --accent2:       #06b6d4;  /* cyan — badge da sidebar */
+
+  /* Sombra e radius padrão */
+  --shadow: 0 4px 18px rgba(27,42,74,.08);
+  --radius: 18px;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════════════════════════
+   LAYOUT — sidebar + main
+   Usado em: monitor/, trading_desk/ e qualquer subsite com nav lateral
+   Header fixo total = 168px (ticker 42px + navbar 126px via navbar.js)
+   Para sites SEM navbar.js, remova o min-height calc e o top das sidebars
+══════════════════════════════════════════════════════════════ */
+.layout {
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr);
+  min-height: calc(100vh - 168px);
+}
+
+/* Sidebar — padrão Monitor (offset só navbar = 126px) */
+.sidebar {
+  position: sticky;
+  top: 126px;
+  height: calc(100vh - 126px);
+  overflow-y: auto;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 26px 18px;
+}
+
+/* Sidebar — Trading Desk (offset ticker + navbar = 168px) */
+.sidebar.td-offset {
+  top: 168px;
+  height: calc(100vh - 168px);
+}
+
+/* Main content — Monitor */
+.main {
+  padding: 26px 28px 34px;
+  min-width: 0;
+  background: var(--bg);
+}
+
+/* Main content — Trading Desk */
+.td-main {
+  padding: 26px 28px 34px;
+  min-width: 0;
+  background: var(--bg);
+}
+
+/* ── Sidebar — Nav Groups ───────────────────────────────────── */
+.nav-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 12px;
+}
+.nav-group + .nav-group { margin-top: 12px; }
+.sidebar .nav-group:first-child {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Brand card (sidebar) ───────────────────────────────────── */
+.brand { display: flex; gap: 10px; align-items: center; }
+.brand-badge {
+  width: 34px; height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent2);
+  font-weight: 800;
+  font-size: 12px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.brand h1 { font-size: 16px; margin: 0; line-height: 1.15; color: var(--label); }
+.brand p  { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+
+/* ── Nav links (sidebar) ────────────────────────────────────── */
+.nav-title {
+  font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: #8a9ab8; margin-bottom: 9px;
+}
+.nav a {
+  display: block; font-size: 13px; font-weight: 500; color: #3a4f6a;
+  padding: 7px 10px; border-radius: 4px; margin-bottom: 2px;
+  border: 1px solid transparent; transition: all .15s; text-decoration: none;
+}
+.nav a:hover  { background: var(--surface-2); color: var(--label); text-decoration: none; }
+.nav a.active { background: var(--label); color: #fff; pointer-events: none; }
+
+/* Notice / Status box */
+.notice {
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 11px; color: var(--muted); font-size: 12px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HOMEPAGE — Hero + Cards Grid
+══════════════════════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, #1b2a4a 0%, #253d6e 60%, #1b2a4a 100%);
+  padding: 36px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; right: -100px; top: -100px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: rgba(255,255,255,.04); pointer-events: none;
+}
+.hero-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 240px; gap: 30px; align-items: center;
+}
+.hero-eyebrow {
+  font-size: .62rem; font-weight: 600; letter-spacing: .18em;
+  text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 9px;
+}
+.hero h1 {
+  font-size: clamp(1.1rem, 2vw, 1.7rem); font-weight: 700;
+  line-height: 1.1; letter-spacing: -.03em; color: #fff; margin-bottom: 9px;
+}
+.hero-sub {
+  font-size: .82rem; color: rgba(255,255,255,.55);
+  line-height: 1.6; margin-bottom: 16px; max-width: 500px;
+}
+.hero-actions { display: flex; gap: 7px; flex-wrap: wrap; }
+
+.hero-btn-white {
+  background: #fff; color: #1b2a4a;
+  padding: 6px 13px; border-radius: 4px;
+  font-size: .78rem; font-weight: 700; border: none; cursor: pointer; transition: all .18s;
+}
+.hero-btn-white:hover { background: #f0f4fa; }
+
+.hero-btn-outline {
+  border: 1.5px solid rgba(255,255,255,.35); color: #fff;
+  padding: 5px 11px; border-radius: 4px;
+  font-size: .76rem; font-weight: 500; background: transparent; cursor: pointer; transition: all .18s;
+}
+.hero-btn-outline:hover { border-color: rgba(255,255,255,.7); }
+
+.hero-right {
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 10px;
+}
+.stat-block { display: flex; flex-direction: column; gap: 2px; padding-bottom: 9px; border-bottom: 1px solid rgba(255,255,255,.10); }
+.stat-block:last-child { border-bottom: none; padding-bottom: 0; }
+.stat-num   { font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: -.03em; }
+.stat-label { font-size: .68rem; color: rgba(255,255,255,.45); font-weight: 500; }
+.stat-change { font-size: .66rem; color: #4ade80; font-weight: 600; }
+
+/* ── Section wrapper (homepage) ─────────────────────────────── */
+.section { padding: 56px 48px; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 28px; border-bottom: 1px solid var(--border); padding-bottom: 18px;
+}
+.section-h { font-size: 1.35rem; font-weight: 700; color: var(--label); }
+.section-p { color: var(--muted); font-size: .9rem; margin-top: 4px; }
+.section-action {
+  font-size: .86rem; font-weight: 600; color: var(--label);
+  display: flex; align-items: center; gap: 6px;
+}
+.section-action::after { content: '→'; }
+
+/* ── Cards Grid (homepage — 3 colunas) ──────────────────────── */
+.cards-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+}
+.card-home {
+  background: var(--surface); padding: 26px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: background .18s; position: relative;
+}
+.card-home:hover { background: var(--surface-2); }
+.card-top   { display: flex; align-items: flex-start; gap: 14px; }
+.card-icon  {
+  width: 46px; height: 46px; border-radius: 8px;
+  background: linear-gradient(135deg, #0f1e38, #1b2a4a);
+  display: grid; place-items: center; font-size: 1.25rem; flex-shrink: 0;
+}
+.card-meta  { flex: 1; }
+.card-tag   {
+  font-size: .68rem; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: #8a9ab8; margin-bottom: 4px;
+}
+.card-name  { font-size: 1rem; font-weight: 700; color: var(--label); line-height: 1.2; }
+.card-desc  { font-size: .86rem; color: var(--muted); line-height: 1.58; flex: 1; }
+.card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px; border-top: 1px solid #edf0f8; margin-top: auto;
+}
+.card-path { font-size: .7rem; color: #a0b0c8; font-family: 'IBM Plex Mono', monospace; }
+.card-cta  {
+  font-size: .82rem; font-weight: 700; color: var(--label);
+  display: flex; align-items: center; gap: 5px;
+}
+.card-cta::after { content: '→'; transition: transform .15s; }
+.card-home:hover .card-cta::after { transform: translateX(4px); }
+
+/* ══════════════════════════════════════════════════════════════
+   CONTEÚDO INTERNO — Monitor, Trading Desk, subsites
+══════════════════════════════════════════════════════════════ */
+
+/* ── Hero de página interna ─────────────────────────────────── */
+.page-hero {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 18px; padding-bottom: 18px;
+  border-bottom: 1px solid var(--line); margin-bottom: 18px;
+}
+.page-hero h2 { margin: 0 0 6px; font-size: 23px; line-height: 1.16; color: var(--label); }
+.page-hero p  { margin: 0; color: var(--muted); max-width: 940px; }
+.page-title {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1; letter-spacing: -.04em; color: var(--label);
+}
+
+/* ── Chips / Pills / Meta ───────────────────────────────────── */
+.meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.chip {
+  border: 1px solid #c8d8f0; border-radius: 6px; padding: 5px 8px;
+  color: var(--blue); background: var(--surface-2); font-size: 11px; font-weight: 600;
+}
+.source-pill {
+  display: inline-flex; border: 1px solid #c8d8f0; border-radius: 6px;
+  padding: 4px 7px; color: var(--blue); font-size: 12px; background: var(--surface-2);
+}
+.pill {
+  border: 1px solid var(--border); background: var(--accent); padding: 8px 12px;
+  border-radius: 999px; font-weight: 700; font-size: .9rem; color: var(--accent-solid);
+}
+
+/* ── Subnav / Submenu (pill-style) ──────────────────────────── */
+.subnav, .submenu {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;
+}
+.subnav a, .submenu a {
+  text-decoration: none; border: 1px solid var(--border); border-radius: 999px;
+  padding: 8px 14px; background: transparent;
+  font-weight: 700; color: var(--text); transition: .15s ease;
+}
+.subnav a:hover, .submenu a:hover { background: var(--surface-2); border-color: var(--label); color: var(--label); }
+.subnav a.active, .submenu a.active { background: var(--label); color: #fff; border-color: var(--label); }
+
+/* ── Botões ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 34px; padding: 8px 11px; border-radius: 6px;
+  border: 1px solid #d0d8e8; background: var(--surface); color: var(--label);
+  font-weight: 650; transition: all .15s; cursor: pointer; text-decoration: none;
+  appearance: none;
+}
+.btn:hover { border-color: var(--label); background: var(--surface-2); text-decoration: none; }
+
+/* Variante pill (trading desk) */
+.btn-pill {
+  border-radius: 999px; padding: 10px 16px;
+  border: 1px solid var(--border); background: var(--panel);
+  color: var(--text); font-weight: 700;
+}
+.btn-pill:hover { background: var(--surface-2); border-color: var(--label); color: var(--label); }
+
+/* ── Cards de Métricas (4 colunas — Monitor) ────────────────── */
+.card-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px; margin: 0 0 20px;
+}
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 13px;
+  box-shadow: 0 1px 4px rgba(27,42,74,.06);
+}
+.card h3 {
+  margin: 0 0 6px; color: var(--muted); font-size: 12px; font-weight: 650;
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.metric     { font-size: 22px; font-weight: 800; line-height: 1.1; color: var(--label); }
+.metric small { font-size: 13px; color: var(--text); font-weight: 650; }
+.delta      { margin-top: 7px; font-size: 12px; }
+.delta.pos, .btc-change.pos, .positive { color: var(--green); }
+.delta.neg, .btc-change.neg, .negative { color: var(--red); }
+.delta.neu, .btc-change.neu, .neutral  { color: #8a9ab8; }
+
+/* ── Painéis / Sections ─────────────────────────────────────── */
+.panel, .section-block {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 17px;
+  box-shadow: 0 1px 4px rgba(27,42,74,.06);
+}
+.panel + .panel { margin-top: 18px; }
+.panel h4 { margin: 0 0 6px; font-size: 15px; color: var(--label); }
+.small    { font-size: 12px; color: var(--muted); }
+
+/* ── Big Panel (trading desk) ───────────────────────────────── */
+.big-panel {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 14px;
+}
+.section-title { font-weight: 800; font-size: 1.05rem; margin: 0 0 10px; color: var(--label); }
+.section-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
+}
+
+/* ── Mini cards (trading desk) ──────────────────────────────── */
+.mini-card {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px;
+}
+.mini-card h3 { margin: 0 0 12px; font-size: 1.1rem; color: var(--label); }
+
+/* ── Tabelas ────────────────────────────────────────────────── */
+.table-wrap { overflow: auto; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; min-width: 900px; }
+th, td {
+  border-bottom: 1px solid var(--line); padding: 11px 10px;
+  text-align: left; vertical-align: middle;
+}
+th {
+  color: #8a9ab8; font-size: 11px; text-transform: uppercase;
+  letter-spacing: .08em; white-space: nowrap; background: var(--panel-2);
+}
+td { font-size: 13px; color: var(--text); }
+td.num, th.num { text-align: right; }
+tr:hover td { background: var(--panel-2); }
+
+/* Tabela estilo page-simple (trading desk) */
+.page-simple table {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.page-simple th, .page-simple td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.page-simple th { font-size: .85rem; text-transform: uppercase; color: var(--muted); letter-spacing: .05em; }
+.page-simple td.positive { color: var(--green); font-weight: 700; }
+.page-simple td.negative { color: var(--red); font-weight: 700; }
+
+/* ── Elementos de dados ─────────────────────────────────────── */
+.operator   { font-weight: 800; color: var(--label); }
+.sub        { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+.btc-change { font-weight: 900; white-space: nowrap; }
+.dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 5px rgba(22,163,74,.10); flex: 0 0 auto;
+}
+
+/* ── Gráficos / Iframes ─────────────────────────────────────── */
+.chart-wrap, .heatmap-wrap {
+  aspect-ratio: 16/9; border-radius: 14px; overflow: hidden;
+  background: var(--panel-2); border: 1px solid var(--border);
+  min-height: 340px; position: relative;
+}
+.chart-fill, .chart-fill > div,
+.chart-wrap iframe, .heatmap-wrap iframe {
+  position: absolute !important; inset: 0;
+  width: 100% !important; height: 100% !important; border: 0;
+}
+.chart-box {
+  background: var(--panel-2); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+#tvchart { width: 100%; height: 80vh; min-height: 720px; }
+
+/* Chart slot grid (trading desk) */
+.chart-grid-4, .chart-grid-6 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+}
+.chart-slot {
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden; min-width: 0;
+}
+.chart-slot .slot-head {
+  padding: 14px 16px; border-bottom: 1px solid var(--border);
+  font-weight: 800; font-size: 1rem; color: var(--label);
+}
+.chart-slot .slot-body {
+  aspect-ratio: 16/9; background: var(--panel-2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); padding: 24px; text-align: center; line-height: 1.5;
+  position: relative;
+}
+.chart-slot .slot-body > div,
+.chart-slot .slot-body iframe {
+  position: absolute !important; inset: 0;
+  width: 100% !important; height: 100% !important; border: 0;
+}
+
+/* Widget box */
+.widget-box {
+  border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; background: var(--panel-2); min-height: 280px;
+}
+.widget-box.tall { min-height: 320px; }
+
+/* ── Big frame (iframe full-height trading desk) ────────────── */
+.big-frame {
+  width: 100%; height: 78vh; min-height: 760px;
+  border: 0; border-radius: 14px; background: var(--panel-2);
+}
+
+/* ── Alertas ────────────────────────────────────────────────── */
+.warn-note { margin-bottom: 10px; border-color: #fde68a; background: #fffbeb; color: #92400e; }
+.bad-note  { margin-bottom: 10px; border-color: #fca5a5; background: #fef2f2; color: #991b1b; }
+pre.code {
+  white-space: pre-wrap; background: var(--panel-2);
+  border: 1px solid var(--border); padding: 14px;
+  border-radius: 8px; color: var(--label); font-size: 12px;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+/* Footer de página interna */
+.footer-inner {
+  margin-top: 24px; padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 12px; line-height: 1.6;
+}
+/* Footer da homepage */
+.footer-home {
+  background: var(--label); padding: 28px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: .8rem; color: rgba(255,255,255,.35);
+}
+.footer-logo { font-size: .92rem; font-weight: 700; color: rgba(255,255,255,.65); }
+.footer-time {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .78rem; color: rgba(255,255,255,.3);
+}
+
+/* ── Grids auxiliares ───────────────────────────────────────── */
+.grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-2fr1fr { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; }
+.left-stack, .right-stack { display: grid; gap: 20px; align-items: start; }
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 12px; }
+.list { display: grid; gap: 8px; }
+.list-item {
+  padding: 11px; border: 1px solid var(--line);
+  border-radius: 8px; background: var(--surface);
+}
+.metric-row {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.metric-row:last-child { border-bottom: 0; }
+.quote-row {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+quote-row:last-child { border-bottom: 0; }
+.quote-row .label   { font-weight: 800; color: var(--label); }
+.quote-row .meta    { display: block; color: var(--muted); font-size: .9rem; margin-top: 4px; }
+.quote-row .value   { text-align: right; }
+.quote-row .price   { font-weight: 800; }
+.quote-row .change  { font-size: .9rem; margin-top: 4px; }
+
+/* ── Container padrão (trading desk) ──────────────────────────── */
+.container { max-width: 1800px; margin: auto; padding: 20px; }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVO
+════════════════════════════════════════════════════════════ -->
+@media (max-width: 1200px) {
+  .grid-2fr1fr    { grid-template-columns: 1fr; }
+  .chart-grid-4,
+  .chart-grid-6   { grid-template-columns: 1fr; }
+  .card-grid      { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .big-frame      { height: 68vh; min-height: 600px; }
+}
+@media (max-width: 1100px) {
+  .layout         { grid-template-columns: 1fr; }
+  .sidebar        { position: relative; height: auto; top: 0; border-right: 0; border-bottom: 1px solid var(--border); }
+  .grid-2col      { grid-template-columns: 1fr; }
+  .card-grid      { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .page-hero      { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 940px) {
+  .hero-inner     { grid-template-columns: 1fr; }
+  .hero-right     { display: none; }
+  .cards-grid     { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .container      { padding: 12px; }
+}
+@media (max-width: 640px) {
+  .main, .td-main { padding: 18px; }
+  .card-grid      { grid-template-columns: 1fr; }
+  .kv             { grid-template-columns: 1fr; }
+  .page-hero h2   { font-size: 20px; }
+  table           { min-width: 760px; }
+  #tvchart        { height: 72vh; min-height: 560px; }
+}
+@media (max-width: 580px) {
+  .cards-grid     { grid-template-columns: 1fr; }
+  .hero           { padding: 48px 20px; }
+  .section        { padding: 36px 20px; }
+  .footer-home    { padding: 20px; flex-direction: column; gap: 8px; }
+}

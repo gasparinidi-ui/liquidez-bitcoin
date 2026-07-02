@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agregados Globais · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="agregados-globais">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais" class="active">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>🌐 Agregados Globais</h2>
+        <p>Índices que somam ou ponderam a liquidez de todos os grandes bancos centrais em uma única série — a visão de topo do ciclo de liquidez mundial, com correlação histórica de 0.8–0.9 com Bitcoin em fases de expansão.</p>
+        <div class="meta-row">
+          <span class="chip">3 indicadores</span>
+          <span class="chip">Índices agregados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Global Liquidity Index (GLI)</h3>
+        <div class="metric" data-metric="gli_index" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>M2 Global G4</h3>
+        <div class="metric" data-metric="m2_global_g4" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Credit Impulse Global (BIS)</h3>
+        <div class="metric" data-metric="bis_credit_impulse" data-unit="% PIB"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">O GLI soma os balanços dos cinco maiores bancos centrais convertidos para USD. O M2 Global G4 pondera a oferta de moeda de EUA, China, Zona do Euro e Japão pelo peso do PIB de cada bloco (fonte: IMF WEO). O Credit Impulse mede a variação do crédito novo como % do PIB global.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>GLI</td><td><span class="source-pill">Calculado (Fed+BCE+BoJ+PBoC+BoE)</span></td><td>Semanal</td></tr>
+              <tr><td>M2 Global G4</td><td><span class="source-pill">Calculado (FRED+ECB+BoJ+PBoC)</span></td><td>Mensal</td></tr>
+              <tr><td>Credit Impulse Global</td><td><span class="source-pill">BIS Data Portal</span></td><td>Trimestral</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

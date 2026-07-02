@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oferta de Moeda · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="oferta-moeda">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda" class="active">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>💵 Oferta de Moeda</h2>
+        <p>Quanto dinheiro efetivamente circula em cada bloco econômico. Historicamente, picos de crescimento do M2 global antecedem em 2-3 meses os principais rallies de Bitcoin.</p>
+        <div class="meta-row">
+          <span class="chip">4 indicadores</span>
+          <span class="chip">Atualização mensal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>M2 Estados Unidos</h3>
+        <div class="metric" data-metric="us_m2" data-unit="US$ tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>M3 Zona do Euro</h3>
+        <div class="metric" data-metric="eurozone_m3" data-unit="EUR tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>M2 China</h3>
+        <div class="metric" data-metric="china_m2" data-unit="CNY tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>M2 Japão</h3>
+        <div class="metric" data-metric="japan_m2" data-unit="JPY tri"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">Séries em moeda local, sem conversão cambial (ver página de Dólar &amp; Risco para o câmbio). China e Japão têm defasagem de publicação maior que EUA e Zona do Euro.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>M2 EUA</td><td><span class="source-pill">FRED · M2SL</span></td><td>Mensal</td></tr>
+              <tr><td>M3 Zona do Euro</td><td><span class="source-pill">ECB SDW · BSI.M.U2.Y.V.M30.X.1</span></td><td>Mensal</td></tr>
+              <tr><td>M2 China</td><td><span class="source-pill">PBoC / FRED (proxy)</span></td><td>Mensal</td></tr>
+              <tr><td>M2 Japão</td><td><span class="source-pill">FRED · MYAGM2JPM189S</span></td><td>Mensal</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liquidez Global &amp; Bitcoin · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+  .master-table td.name{ font-weight:700; color:var(--label); }
+  .cat-badge{
+    display:inline-block; font-size:10px; font-weight:700; letter-spacing:.05em;
+    text-transform:uppercase; padding:3px 7px; border-radius:5px;
+    background:var(--surface-2); color:var(--blue); border:1px solid var(--border);
+  }
+</style>
+</head>
+<body data-page="overview">
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div>
+          <h1>Liquidez BTC</h1>
+          <p>30 indicadores globais · GDI</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">
+        Atualizado: <strong id="last-update">carregando…</strong><br>
+        Frequência: GitHub Actions (a cada hora)<br>
+        Custo: US$ 0 · 100% fontes gratuitas
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="page-hero">
+      <div>
+        <h2>Liquidez Global &amp; Bitcoin</h2>
+        <p>Os 30 indicadores de liquidez macro e cripto com maior influência histórica sobre a cotação do Bitcoin, atualizados automaticamente a partir de fontes públicas e gratuitas.</p>
+        <div class="meta-row">
+          <span class="chip">6 categorias</span>
+          <span class="chip">30 indicadores</span>
+          <span class="chip">Atualização automática</span>
+          <span class="chip">Custo zero</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0 0 30px;">
+      <div class="panel">
+        <h4>Todos os indicadores</h4>
+        <p class="small">Clique em uma categoria na barra lateral para o detalhamento completo, gráficos e metodologia de cada indicador.</p>
+        <div class="table-wrap">
+          <table class="master-table">
+            <thead>
+              <tr>
+                <th>Indicador</th>
+                <th>Categoria</th>
+                <th class="num">Valor · Variação · Atualizado em</th>
+              </tr>
+            </thead>
+            <tbody id="master-tbody">
+              <!-- Linhas geradas via JS a partir de INDICATORS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="section-inner" style="padding:0;">
+        <div class="section-head">
+          <div>
+            <div class="section-h">Explorar por categoria</div>
+            <p class="section-p">Cada painel detalha os indicadores, fórmulas e fontes de dados</p>
+          </div>
+        </div>
+        <div class="cards-grid" id="category-cards">
+          <!-- Cards gerados via JS a partir de CATEGORIES -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">
+      Liquidez BTC · GDI — dados agregados de FRED, ECB SDW, BIS, Yahoo Finance, DefiLlama, Bybit e Alternative.me. Não é recomendação de investimento.
+    </div>
+
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script>
+  const catMeta = {
+    'bancos-centrais': { desc: 'Balanços do Fed, BCE, BoJ e PBoC — a fonte primária de liquidez.', icon: '🏛️' },
+    'agregados-globais': { desc: 'Índices que somam/ponderam a liquidez de todos os grandes bancos centrais.', icon: '🌐' },
+    'oferta-moeda': { desc: 'M2/M3 por região — quanto dinheiro circula em cada bloco econômico.', icon: '💵' },
+    'juros-credito': { desc: 'Custo do dinheiro e apetite por crédito — condições financeiras.', icon: '📈' },
+    'dolar-risco': { desc: 'Força do dólar e termômetros de volatilidade/risco.', icon: '⚖️' },
+    'liquidez-cripto': { desc: 'Liquidez que entra diretamente no mercado cripto.', icon: '₿' },
+  };
+
+  // Master table — cada linha vira uma célula única com data-metric contendo
+  // os três campos (value/delta/as_of) que o data_loader.js sabe preencher.
+  const tbody = document.getElementById('master-tbody');
+  INDICATORS.forEach((ind) => {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    td.className = 'name';
+    td.textContent = ind.name;
+
+    const tdCat = document.createElement('td');
+    tdCat.innerHTML = `<span class="cat-badge">${ind.cat}</span>`;
+
+    const tdVal = document.createElement('td');
+    tdVal.className = 'num';
+    tdVal.setAttribute('data-metric', ind.id);
+    tdVal.setAttribute('data-unit', ind.unit);
+    tdVal.innerHTML = `<span data-field="value">—</span> <span class="delta neu" data-field="delta">—</span>`;
+
+    const tdAsOf = document.createElement('td');
+    tdAsOf.innerHTML = `<span class="small" data-field="as_of">—</span>`;
+    tdVal.appendChild(tdAsOf.firstElementChild);
+
+    tr.appendChild(td);
+    tr.appendChild(tdCat);
+    tr.appendChild(tdVal);
+    tbody.appendChild(tr);
+  });
+
+  // Category cards
+  const catCards = document.getElementById('category-cards');
+  CATEGORIES.forEach((cat) => {
+    const count = INDICATORS.filter(i => i.cat === cat.key).length;
+    const a = document.createElement('a');
+    a.className = 'card-home';
+    a.href = `./${cat.page}`;
+    a.innerHTML = `
+      <div class="card-top">
+        <div class="card-icon">${cat.icon}</div>
+        <div class="card-meta">
+          <div class="card-tag">${count} indicadores</div>
+          <div class="card-name">${cat.label}</div>
+        </div>
+      </div>
+      <div class="card-desc">${catMeta[cat.key]?.desc || ''}</div>
+      <div class="card-footer">
+        <span class="card-path">/${cat.page}</span>
+        <span class="card-cta">Abrir</span>
+      </div>
+    `;
+    catCards.appendChild(a);
+  });
+</script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

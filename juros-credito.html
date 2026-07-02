@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juros &amp; Crédito · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="juros-credito">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito" class="active">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>📈 Juros &amp; Crédito</h2>
+        <p>O custo do dinheiro. Juros reais em queda e spreads de crédito comprimindo sinalizam apetite por risco — historicamente favorável para Bitcoin. Curva invertida costuma preceder estresse de liquidez.</p>
+        <div class="meta-row">
+          <span class="chip">6 indicadores</span>
+          <span class="chip">Atualização diária</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Fed Funds Rate</h3>
+        <div class="metric" data-metric="fed_funds_rate" data-unit="%"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>SOFR</h3>
+        <div class="metric" data-metric="sofr_rate" data-unit="%"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Treasury 10 anos</h3>
+        <div class="metric" data-metric="ust10y" data-unit="%"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Curva de Juros 2s10s</h3>
+        <div class="metric" data-metric="yield_curve_2s10s" data-unit="p.p."><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Spread High Yield</h3>
+        <div class="metric" data-metric="hy_credit_spread" data-unit="p.p."><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Yield Real 10 anos (TIPS)</h3>
+        <div class="metric" data-metric="real_yield_10y" data-unit="%"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">Todas as séries em pontos percentuais (%) ou pontos-percentuais de spread (p.p.), publicadas diariamente pelo Federal Reserve Economic Data (FRED).</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>Fed Funds Rate</td><td><span class="source-pill">FRED · FEDFUNDS</span></td><td>Diária</td></tr>
+              <tr><td>SOFR</td><td><span class="source-pill">FRED · SOFR</span></td><td>Diária</td></tr>
+              <tr><td>Treasury 10 anos</td><td><span class="source-pill">FRED · DGS10</span></td><td>Diária</td></tr>
+              <tr><td>Curva 2s10s</td><td><span class="source-pill">FRED · T10Y2Y</span></td><td>Diária</td></tr>
+              <tr><td>Spread High Yield</td><td><span class="source-pill">FRED · BAMLH0A0HYM2</span></td><td>Diária</td></tr>
+              <tr><td>Yield Real 10 anos</td><td><span class="source-pill">FRED · DFII10</span></td><td>Diária</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>

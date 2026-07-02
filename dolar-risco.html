@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dólar &amp; Risco · Liquidez BTC · GDI</title>
+<link rel="stylesheet" href="./design/gdi.css">
+<style>
+  .layout{ min-height:100vh; }
+  .sidebar{ position:sticky; top:0; height:100vh; }
+</style>
+</head>
+<body data-page="dolar-risco">
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="nav-group">
+      <div class="brand">
+        <div class="brand-badge">₿</div>
+        <div><h1>Liquidez BTC</h1><p>30 indicadores globais · GDI</p></div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Painéis</div>
+      <nav class="nav">
+        <a href="./index.html" data-nav="overview">Visão Geral</a>
+        <a href="./bancos-centrais.html" data-nav="bancos-centrais">🏛️ Bancos Centrais</a>
+        <a href="./agregados-globais.html" data-nav="agregados-globais">🌐 Agregados Globais</a>
+        <a href="./oferta-moeda.html" data-nav="oferta-moeda">💵 Oferta de Moeda</a>
+        <a href="./juros-credito.html" data-nav="juros-credito">📈 Juros &amp; Crédito</a>
+        <a href="./dolar-risco.html" data-nav="dolar-risco" class="active">⚖️ Dólar &amp; Risco</a>
+        <a href="./liquidez-cripto.html" data-nav="liquidez-cripto">₿ Liquidez Cripto</a>
+        <a href="./fontes.html" data-nav="fontes">📚 Fontes &amp; Metodologia</a>
+      </nav>
+    </div>
+    <div class="nav-group">
+      <div class="nav-title">Status</div>
+      <div class="notice">Atualizado: <strong id="last-update">carregando…</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-hero">
+      <div>
+        <h2>⚖️ Dólar &amp; Risco</h2>
+        <p>A força do dólar é o driver mais consistente e persistente de liquidez global — cerca de 64% da dívida mundial é denominada em USD. Um DXY em queda historicamente coincide com apreciação de Bitcoin.</p>
+        <div class="meta-row">
+          <span class="chip">5 indicadores</span>
+          <span class="chip">Intradiário</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Índice DXY (Dólar)</h3>
+        <div class="metric" data-metric="dxy_index" data-unit="pts"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Linhas de Swap USD do Fed</h3>
+        <div class="metric" data-metric="fed_swap_lines" data-unit="US$ bi"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>VIX</h3>
+        <div class="metric" data-metric="vix_index" data-unit="pts"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>MOVE Index</h3>
+        <div class="metric" data-metric="move_index" data-unit="pts"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+      <div class="card">
+        <h3>Ouro (XAU/USD)</h3>
+        <div class="metric" data-metric="gold_price" data-unit="US$/oz"><span data-field="value">—</span></div>
+        <div class="delta neu" data-field="delta">—</div>
+      </div>
+    </div>
+
+    <div class="section" style="padding:0;">
+      <div class="panel">
+        <h4>Metodologia e fontes</h4>
+        <p class="small">VIX e MOVE são termômetros de volatilidade implícita (ações e Treasuries, respectivamente); leituras baixas indicam maior apetite por risco. O ouro serve como referência de fluxo para ativos de reserva de valor.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
+            <tbody>
+              <tr><td>DXY</td><td><span class="source-pill">Yahoo Finance · DX-Y.NYB</span></td><td>Intradiária</td></tr>
+              <tr><td>Swap Lines Fed</td><td><span class="source-pill">FRED · SWPT</span></td><td>Semanal</td></tr>
+              <tr><td>VIX</td><td><span class="source-pill">Yahoo Finance · ^VIX</span></td><td>Intradiária</td></tr>
+              <tr><td>MOVE Index</td><td><span class="source-pill">Yahoo Finance · ^MOVE</span></td><td>Intradiária</td></tr>
+              <tr><td>Ouro</td><td><span class="source-pill">Yahoo Finance · GC=F</span></td><td>Intradiária</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-inner">Liquidez BTC · GDI</div>
+  </main>
+</div>
+
+<script src="./assets/indicators.js"></script>
+<script src="./assets/data_loader.js"></script>
+</body>
+</html>
