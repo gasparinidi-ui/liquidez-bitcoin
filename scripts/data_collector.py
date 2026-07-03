@@ -80,6 +80,12 @@ def fetch_yfinance(ticker):
     return {"value": latest, "change_pct": change_pct, "as_of": as_of}
 
 
+def fetch_usdjpy_rate():
+    """Retorna quantos JPY por 1 USD (para converter séries em Yen para USD)."""
+    r = fetch_yfinance("JPY=X")
+    return r["value"] if r else None
+
+
 # ── DefiLlama (stablecoins) ─────────────────────────────────────────────
 def fetch_stablecoin_supply():
     r = requests.get("https://stablecoins.llama.fi/stablecoins?includePrices=false", headers=HEADERS, timeout=20)
@@ -181,33 +187,71 @@ def build_metrics():
     metrics = {}
 
     # A. Bancos Centrais
-    metrics["fed_balance_sheet"] = safe_call(fetch_fred_series, "WALCL")  # milhões USD
+    # NOTA DE ESCALA: as séries internacionais do FRED (WALCL, ECBASSETSW,
+    # JPNASSETS) vêm em MILHÕES de USD → dividir por 1e6 para chegar em
+    # trilhões. WTREGEN (TGA) vem em MILHÕES de USD → dividir por 1000
+    # para chegar em bilhões. Um erro aqui gerava valores 1000x/1e6x errados.
+    metrics["fed_balance_sheet"] = safe_call(fetch_fred_series, "WALCL")
     if metrics["fed_balance_sheet"]:
-        metrics["fed_balance_sheet"]["value"] = round(metrics["fed_balance_sheet"]["value"] / 1e6, 3)  # -> US$ tri
-    metrics["reverse_repo"] = safe_call(fetch_fred_series, "RRPONTSYD")
-    metrics["tga_balance"] = safe_call(fetch_fred_series, "WTREGEN")
+        metrics["fed_balance_sheet"]["value"] = round(metrics["fed_balance_sheet"]["value"] / 1e6, 3)  # milhões -> tri
+
     metrics["ecb_balance_sheet"] = safe_call(fetch_fred_series, "ECBASSETSW")
+    if metrics["ecb_balance_sheet"]:
+        metrics["ecb_balance_sheet"]["value"] = round(metrics["ecb_balance_sheet"]["value"] / 1e6, 3)  # milhões -> tri
+
     metrics["boj_balance_sheet"] = safe_call(fetch_fred_series, "JPNASSETS")
+    if metrics["boj_balance_sheet"]:
+        metrics["boj_balance_sheet"]["value"] = round(metrics["boj_balance_sheet"]["value"] / 1e6, 3)  # milhões -> tri
+
+    metrics["reverse_repo"] = safe_call(fetch_fred_series, "RRPONTSYD")  # já em bilhões de USD
+
+    metrics["tga_balance"] = safe_call(fetch_fred_series, "WTREGEN")
+    if metrics["tga_balance"]:
+        metrics["tga_balance"]["value"] = round(metrics["tga_balance"]["value"] / 1000, 3)  # milhões -> bi
+
     metrics["pboc_balance_sheet"] = None  # sem fonte gratuita confiável em API — atualização manual
 
     if metrics.get("fed_balance_sheet") and metrics.get("tga_balance") and metrics.get("reverse_repo"):
-        net = metrics["fed_balance_sheet"]["value"] * 1000 - metrics["tga_balance"]["value"] - metrics["reverse_repo"]["value"] / 1000
-        metrics["fed_net_liquidity"] = {"value": round(net / 1000, 3), "change_pct": None, "as_of": metrics["fed_balance_sheet"]["as_of"]}
+        net_bi = metrics["fed_balance_sheet"]["value"] * 1000 - metrics["tga_balance"]["value"] - metrics["reverse_repo"]["value"] / 1000
+        metrics["fed_net_liquidity"] = {"value": round(net_bi / 1000, 3), "change_pct": None, "as_of": metrics["fed_balance_sheet"]["as_of"]}
     else:
         metrics["fed_net_liquidity"] = None
 
-    # B. Agregados Globais — calculados a partir de séries já buscadas quando possível
-    metrics["gli_index"] = None  # requer BoE + PBoC — completar manualmente ou expandir fetch_fred_series
-    metrics["m2_global_g4"] = None
+    # B. Agregados Globais
+    # GLI (parcial): soma Fed + BCE + BoJ, todos já em US$ tri. Falta PBoC e
+    # BoE (sem fonte gratuita simples) — por isso é um PROXY, não o GLI
+    # "oficial" de 5 bancos centrais.
+    gli_parts = [metrics.get("fed_balance_sheet"), metrics.get("ecb_balance_sheet"), metrics.get("boj_balance_sheet")]
+    if all(p is not None for p in gli_parts):
+        gli_value = sum(p["value"] for p in gli_parts)
+        metrics["gli_index"] = {"value": round(gli_value, 3), "change_pct": None, "as_of": gli_parts[0]["as_of"]}
+    else:
+        metrics["gli_index"] = None
+
     metrics["bis_credit_impulse"] = None  # BIS não tem API JSON simples — download CSV manual (ver fontes.html)
 
     # C. Oferta de Moeda
-    metrics["us_m2"] = safe_call(fetch_fred_series, "M2SL")
+    metrics["us_m2"] = safe_call(fetch_fred_series, "M2SL")  # bilhões de USD
     if metrics["us_m2"]:
         metrics["us_m2"]["value"] = round(metrics["us_m2"]["value"] / 1000, 3)  # bi -> tri
+
     metrics["eurozone_m3"] = None  # ECB SDW requer parsing SDMX — ver fontes.html
     metrics["china_m2"] = None
-    metrics["japan_m2"] = safe_call(fetch_fred_series, "MYAGM2JPM189S")
+
+    metrics["japan_m2"] = safe_call(fetch_fred_series, "MYAGM2JPM189S")  # ienes correntes (não escalado)
+    if metrics["japan_m2"]:
+        metrics["japan_m2"]["value"] = round(metrics["japan_m2"]["value"] / 1e12, 3)  # ienes -> tri de ienes
+
+    # M2 Global G4 (parcial): EUA + Japão, convertendo o Japão para USD pela
+    # cotação USD/JPY do dia. Falta China e Zona do Euro (sem fonte gratuita
+    # simples) — também é um PROXY, não o M2 G4 completo.
+    usdjpy = safe_call(fetch_usdjpy_rate)
+    if metrics.get("us_m2") and metrics.get("japan_m2") and usdjpy:
+        japan_m2_usd_tri = metrics["japan_m2"]["value"] / usdjpy  # tri JPY / (JPY por USD) = tri USD
+        m2_g4_value = metrics["us_m2"]["value"] + japan_m2_usd_tri
+        metrics["m2_global_g4"] = {"value": round(m2_g4_value, 3), "change_pct": None, "as_of": metrics["us_m2"]["as_of"]}
+    else:
+        metrics["m2_global_g4"] = None
 
     # D. Juros & Crédito
     metrics["fed_funds_rate"] = safe_call(fetch_fred_series, "FEDFUNDS")

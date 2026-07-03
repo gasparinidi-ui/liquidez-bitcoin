@@ -53,12 +53,12 @@
 
     <div class="card-grid">
       <div class="card">
-        <h3>Global Liquidity Index (GLI)</h3>
+        <h3>Global Liquidity Index (GLI) — parcial</h3>
         <div class="metric" data-metric="gli_index" data-unit="US$ tri"><span data-field="value">—</span></div>
         <div class="delta neu" data-field="delta">—</div>
       </div>
       <div class="card">
-        <h3>M2 Global G4</h3>
+        <h3>M2 Global G4 — parcial</h3>
         <div class="metric" data-metric="m2_global_g4" data-unit="US$ tri"><span data-field="value">—</span></div>
         <div class="delta neu" data-field="delta">—</div>
       </div>
@@ -72,14 +72,18 @@
     <div class="section" style="padding:0;">
       <div class="panel">
         <h4>Metodologia e fontes</h4>
-        <p class="small">O GLI soma os balanços dos cinco maiores bancos centrais convertidos para USD. O M2 Global G4 pondera a oferta de moeda de EUA, China, Zona do Euro e Japão pelo peso do PIB de cada bloco (fonte: IMF WEO). O Credit Impulse mede a variação do crédito novo como % do PIB global.</p>
+        <p class="small">
+          <strong>GLI (parcial):</strong> soma os balanços do Fed, BCE e BoJ, já convertidos para USD — atualizado automaticamente. É um proxy: falta PBoC e BoE, que não têm API gratuita simples, então o número fica abaixo do GLI "oficial" de 5 bancos centrais.<br>
+          <strong>M2 Global G4 (parcial):</strong> soma o M2 dos EUA com o M2 do Japão (convertido para USD pela cotação do dia) — atualizado automaticamente. Falta China e Zona do Euro pelo mesmo motivo.<br>
+          <strong>Credit Impulse:</strong> mede a variação do crédito novo como % do PIB global — só disponível via download manual trimestral do BIS Data Portal.
+        </p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Indicador</th><th>Fonte</th><th>Frequência</th></tr></thead>
             <tbody>
-              <tr><td>GLI</td><td><span class="source-pill">Calculado (Fed+BCE+BoJ+PBoC+BoE)</span></td><td>Semanal</td></tr>
-              <tr><td>M2 Global G4</td><td><span class="source-pill">Calculado (FRED+ECB+BoJ+PBoC)</span></td><td>Mensal</td></tr>
-              <tr><td>Credit Impulse Global</td><td><span class="source-pill">BIS Data Portal</span></td><td>Trimestral</td></tr>
+              <tr><td>GLI (parcial)</td><td><span class="source-pill">Calculado (FRED: Fed+BCE+BoJ)</span></td><td>Semanal</td></tr>
+              <tr><td>M2 Global G4 (parcial)</td><td><span class="source-pill">Calculado (FRED+yfinance USD/JPY)</span></td><td>Mensal</td></tr>
+              <tr><td>Credit Impulse Global</td><td><span class="source-pill">BIS Data Portal (manual)</span></td><td>Trimestral</td></tr>
             </tbody>
           </table>
         </div>

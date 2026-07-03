@@ -20,8 +20,8 @@ const INDICATORS = [
   { id: 'pboc_balance_sheet', name: 'Balanço do PBoC', cat: 'bancos-centrais', unit: 'US$ tri', source: 'PBoC / manual', freq: 'Mensal' },
 
   // ── B. AGREGADOS GLOBAIS (3) ─────────────────────────────────────
-  { id: 'gli_index', name: 'Global Liquidity Index (GLI)', desc: 'Soma dos 5 maiores balanços de BC em USD', cat: 'agregados-globais', unit: 'US$ tri', source: 'Calculado (Fed+BCE+BoJ+PBoC+BoE)', freq: 'Semanal' },
-  { id: 'm2_global_g4', name: 'M2 Global G4', desc: 'EUA+China+Zona do Euro+Japão, ponderado por PIB', cat: 'agregados-globais', unit: 'US$ tri', source: 'Calculado (FRED+ECB+BoJ+PBoC)', freq: 'Mensal' },
+  { id: 'gli_index', name: 'Global Liquidity Index (GLI) — parcial', desc: 'Soma Fed+BCE+BoJ em USD (falta PBoC e BoE)', cat: 'agregados-globais', unit: 'US$ tri', source: 'Calculado (FRED: Fed+BCE+BoJ)', freq: 'Semanal' },
+  { id: 'm2_global_g4', name: 'M2 Global G4 — parcial', desc: 'EUA+Japão convertido para USD (falta China e Zona do Euro)', cat: 'agregados-globais', unit: 'US$ tri', source: 'Calculado (FRED+yfinance USD/JPY)', freq: 'Mensal' },
   { id: 'bis_credit_impulse', name: 'Credit Impulse Global (BIS)', cat: 'agregados-globais', unit: '% PIB', source: 'BIS Data Portal', freq: 'Trimestral' },
 
   // ── C. OFERTA DE MOEDA POR REGIÃO (4) ────────────────────────────
