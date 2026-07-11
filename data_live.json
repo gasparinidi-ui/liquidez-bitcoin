@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T23:10:43.798408+00:00",
+  "updated_at": "2026-07-11T03:35:37.501204+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.736,
@@ -107,24 +107,24 @@
       "as_of": "2026-07-10"
     },
     "stablecoin_supply": {
-      "value": 310.96,
+      "value": 310.93,
       "change_pct": null,
-      "as_of": "2026-07-10"
+      "as_of": "2026-07-11"
     },
     "btc_funding_rate": {
-      "value": 0.0099,
+      "value": 0.0019,
       "change_pct": null,
-      "as_of": "2026-07-11 00:00"
+      "as_of": "2026-07-11 08:00"
     },
     "btc_open_interest": {
-      "value": 1.947,
+      "value": 1.955,
       "change_pct": null,
-      "as_of": "2026-07-10 23:10"
+      "as_of": "2026-07-11 03:35"
     },
     "fear_greed_index": {
-      "value": 23,
-      "change_pct": 4.55,
-      "as_of": "2026-07-10"
+      "value": 26,
+      "change_pct": 13.04,
+      "as_of": "2026-07-11"
     }
   }
 }
