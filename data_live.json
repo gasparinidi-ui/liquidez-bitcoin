@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15T14:06:10.924745+00:00",
+  "updated_at": "2026-07-15T15:47:09.085901+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.736,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 28.99,
+      "value": 28.994,
       "change_pct": null,
       "as_of": "2026-05-01"
     },
@@ -61,6 +61,11 @@
       "change_pct": 0.833,
       "as_of": "2026-07-14"
     },
+    "ust10y": {
+      "value": 4.62,
+      "change_pct": 1.316,
+      "as_of": "2026-07-13"
+    },
     "yield_curve_2s10s": {
       "value": 0.4,
       "change_pct": 11.111,
@@ -71,14 +76,24 @@
       "change_pct": 1.115,
       "as_of": "2026-07-14"
     },
+    "real_yield_10y": {
+      "value": 2.36,
+      "change_pct": 1.724,
+      "as_of": "2026-07-13"
+    },
     "dxy_index": {
-      "value": 100.83499908447266,
-      "change_pct": -0.439,
+      "value": 100.7239990234375,
+      "change_pct": -0.214,
       "as_of": "2026-07-15"
     },
+    "fed_swap_lines": {
+      "value": 170.0,
+      "change_pct": -32.0,
+      "as_of": "2026-07-08"
+    },
     "vix_index": {
-      "value": 16.290000915527344,
-      "change_pct": -5.07,
+      "value": 16.110000610351562,
+      "change_pct": -2.364,
       "as_of": "2026-07-15"
     },
     "move_index": {
@@ -87,24 +102,24 @@
       "as_of": "2026-07-10"
     },
     "gold_price": {
-      "value": 4068.60009765625,
-      "change_pct": 0.185,
+      "value": 4053.800048828125,
+      "change_pct": -0.18,
       "as_of": "2026-07-15"
     },
     "stablecoin_supply": {
-      "value": 308.73,
+      "value": 308.97,
       "change_pct": null,
       "as_of": "2026-07-15"
     },
     "btc_funding_rate": {
-      "value": 0.0055,
+      "value": 0.0036,
       "change_pct": null,
       "as_of": "2026-07-15 16:00"
     },
     "btc_open_interest": {
-      "value": 2.005,
+      "value": 2.024,
       "change_pct": null,
-      "as_of": "2026-07-15 14:06"
+      "as_of": "2026-07-15 15:47"
     },
     "fear_greed_index": {
       "value": 25,
