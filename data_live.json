@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T15:13:27.897542+00:00",
+  "updated_at": "2026-07-21T17:40:10.395779+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.743,
@@ -7,9 +7,9 @@
       "as_of": "2026-07-15"
     },
     "ecb_balance_sheet": {
-      "value": 5.971,
-      "change_pct": -0.209,
-      "as_of": "2026-07-10"
+      "value": 5.949,
+      "change_pct": -0.359,
+      "as_of": "2026-07-17"
     },
     "boj_balance_sheet": {
       "value": 6.396,
@@ -32,7 +32,7 @@
       "as_of": "2026-07-15"
     },
     "gli_index": {
-      "value": 19.11,
+      "value": 19.088,
       "change_pct": null,
       "as_of": "2026-07-15"
     },
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 28.962,
+      "value": 28.961,
       "change_pct": null,
       "as_of": "2026-05-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-07-17"
     },
     "dxy_index": {
-      "value": 101.14800262451172,
-      "change_pct": 0.156,
+      "value": 101.0999984741211,
+      "change_pct": 0.109,
       "as_of": "2026-07-21"
     },
     "fed_swap_lines": {
@@ -92,8 +92,8 @@
       "as_of": "2026-07-15"
     },
     "vix_index": {
-      "value": 17.399999618530273,
-      "change_pct": -6.702,
+      "value": 17.110000610351562,
+      "change_pct": -8.257,
       "as_of": "2026-07-21"
     },
     "move_index": {
@@ -102,24 +102,24 @@
       "as_of": "2026-07-17"
     },
     "gold_price": {
-      "value": 4073.10009765625,
-      "change_pct": 1.566,
+      "value": 4076.300048828125,
+      "change_pct": 1.646,
       "as_of": "2026-07-21"
     },
     "stablecoin_supply": {
-      "value": 309.03,
+      "value": 309.14,
       "change_pct": null,
       "as_of": "2026-07-21"
     },
     "btc_funding_rate": {
-      "value": -0.0044,
+      "value": -0.0007,
       "change_pct": null,
-      "as_of": "2026-07-21 16:00"
+      "as_of": "2026-07-22 00:00"
     },
     "btc_open_interest": {
-      "value": 2.202,
+      "value": 2.198,
       "change_pct": null,
-      "as_of": "2026-07-21 15:13"
+      "as_of": "2026-07-21 17:40"
     },
     "fear_greed_index": {
       "value": 25,
