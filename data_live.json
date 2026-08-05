@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T12:09:06.664513+00:00",
+  "updated_at": "2026-08-05T15:24:24.040989+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.738,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.267,
+      "value": 29.268,
       "change_pct": null,
       "as_of": "2026-06-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-08-03"
     },
     "dxy_index": {
-      "value": 99.69999694824219,
-      "change_pct": -0.19,
+      "value": 99.68399810791016,
+      "change_pct": -0.206,
       "as_of": "2026-08-05"
     },
     "fed_swap_lines": {
@@ -92,8 +92,8 @@
       "as_of": "2026-07-29"
     },
     "vix_index": {
-      "value": 16.68000030517578,
-      "change_pct": 1.091,
+      "value": 16.290000915527344,
+      "change_pct": -1.273,
       "as_of": "2026-08-05"
     },
     "move_index": {
@@ -102,24 +102,24 @@
       "as_of": "2026-08-04"
     },
     "gold_price": {
-      "value": 4250.39990234375,
-      "change_pct": 3.785,
+      "value": 4319.2001953125,
+      "change_pct": 5.465,
       "as_of": "2026-08-05"
     },
     "stablecoin_supply": {
-      "value": 307.41,
+      "value": 306.95,
       "change_pct": null,
       "as_of": "2026-08-05"
     },
     "btc_funding_rate": {
-      "value": 0.006,
+      "value": -0.0001,
       "change_pct": null,
       "as_of": "2026-08-05 16:00"
     },
     "btc_open_interest": {
-      "value": 2.006,
+      "value": 2.001,
       "change_pct": null,
-      "as_of": "2026-08-05 12:09"
+      "as_of": "2026-08-05 15:24"
     },
     "fear_greed_index": {
       "value": 27,
