@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T19:10:30.271740+00:00",
+  "updated_at": "2026-08-07T20:53:09.701868+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.749,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.269,
+      "value": 29.259,
       "change_pct": null,
       "as_of": "2026-06-01"
     },
@@ -62,9 +62,9 @@
       "as_of": "2026-08-06"
     },
     "ust10y": {
-      "value": 4.63,
-      "change_pct": 0.0,
-      "as_of": "2026-08-05"
+      "value": 4.69,
+      "change_pct": 1.296,
+      "as_of": "2026-08-06"
     },
     "yield_curve_2s10s": {
       "value": 0.44,
@@ -77,13 +77,13 @@
       "as_of": "2026-08-06"
     },
     "real_yield_10y": {
-      "value": 2.41,
-      "change_pct": 0.417,
-      "as_of": "2026-08-05"
+      "value": 2.43,
+      "change_pct": 0.83,
+      "as_of": "2026-08-06"
     },
     "dxy_index": {
-      "value": 99.53199768066406,
-      "change_pct": -0.438,
+      "value": 99.61499786376953,
+      "change_pct": -0.355,
       "as_of": "2026-08-07"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-08-05"
     },
     "vix_index": {
-      "value": 14.880000114440918,
-      "change_pct": -1.782,
+      "value": 14.899999618530273,
+      "change_pct": -1.65,
       "as_of": "2026-08-07"
     },
     "move_index": {
-      "value": 76.11689758300781,
+      "value": 72.03019714355469,
       "change_pct": null,
-      "as_of": "2026-08-06"
+      "as_of": "2026-08-07"
     },
     "gold_price": {
-      "value": 4397.39990234375,
-      "change_pct": 3.663,
+      "value": 4399.5,
+      "change_pct": 3.713,
       "as_of": "2026-08-07"
     },
     "stablecoin_supply": {
-      "value": 307.86,
+      "value": 307.19,
       "change_pct": null,
       "as_of": "2026-08-07"
     },
     "btc_funding_rate": {
-      "value": 0.0036,
+      "value": 0.0049,
       "change_pct": null,
       "as_of": "2026-08-08 00:00"
     },
     "btc_open_interest": {
-      "value": 1.984,
+      "value": 2.022,
       "change_pct": null,
-      "as_of": "2026-08-07 19:10"
+      "as_of": "2026-08-07 20:53"
     },
     "fear_greed_index": {
       "value": 29,
