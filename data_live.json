@@ -1,60 +1,20 @@
 {
-  "updated_at": "2026-08-11T04:36:07.824163+00:00",
+  "updated_at": "2026-08-11T06:02:30.777025+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.749,
       "change_pct": 0.154,
       "as_of": "2026-08-05"
     },
-    "ecb_balance_sheet": {
-      "value": 5.941,
-      "change_pct": -0.047,
-      "as_of": "2026-07-31"
-    },
     "boj_balance_sheet": {
       "value": 6.443,
       "change_pct": 0.742,
       "as_of": "2026-07-01"
     },
-    "reverse_repo": {
-      "value": 0.975,
-      "change_pct": -32.759,
-      "as_of": "2026-08-10"
-    },
-    "tga_balance": {
-      "value": 907.324,
-      "change_pct": -0.379,
-      "as_of": "2026-08-05"
-    },
-    "fed_net_liquidity": {
-      "value": 5.842,
-      "change_pct": null,
-      "as_of": "2026-08-05"
-    },
-    "gli_index": {
-      "value": 19.133,
-      "change_pct": null,
-      "as_of": "2026-08-05"
-    },
-    "us_m2": {
-      "value": 23.155,
-      "change_pct": 0.432,
-      "as_of": "2026-06-01"
-    },
     "japan_m2": {
       "value": 963.219,
       "change_pct": 0.422,
       "as_of": "2017-02-01"
-    },
-    "m2_global_g4": {
-      "value": 29.205,
-      "change_pct": null,
-      "as_of": "2026-06-01"
-    },
-    "fed_funds_rate": {
-      "value": 3.63,
-      "change_pct": 0.0,
-      "as_of": "2026-07-01"
     },
     "sofr_rate": {
       "value": 3.62,
@@ -76,14 +36,9 @@
       "change_pct": -0.369,
       "as_of": "2026-08-07"
     },
-    "real_yield_10y": {
-      "value": 2.4,
-      "change_pct": -1.235,
-      "as_of": "2026-08-07"
-    },
     "dxy_index": {
-      "value": 99.77899932861328,
-      "change_pct": -0.031,
+      "value": 99.79900360107422,
+      "change_pct": -0.011,
       "as_of": "2026-08-11"
     },
     "fed_swap_lines": {
@@ -102,12 +57,12 @@
       "as_of": "2026-08-10"
     },
     "gold_price": {
-      "value": 4471.2998046875,
-      "change_pct": 2.51,
+      "value": 4431.10009765625,
+      "change_pct": 1.589,
       "as_of": "2026-08-11"
     },
     "stablecoin_supply": {
-      "value": 306.0,
+      "value": 306.34,
       "change_pct": null,
       "as_of": "2026-08-11"
     },
@@ -117,9 +72,9 @@
       "as_of": "2026-08-11 08:00"
     },
     "btc_open_interest": {
-      "value": 2.087,
+      "value": 2.08,
       "change_pct": null,
-      "as_of": "2026-08-11 04:36"
+      "as_of": "2026-08-11 06:02"
     },
     "fear_greed_index": {
       "value": 29,
