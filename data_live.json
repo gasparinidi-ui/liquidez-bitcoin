@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T15:12:13.340100+00:00",
+  "updated_at": "2026-08-11T17:08:35.142226+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.749,
@@ -7,9 +7,9 @@
       "as_of": "2026-08-05"
     },
     "ecb_balance_sheet": {
-      "value": 5.941,
-      "change_pct": -0.047,
-      "as_of": "2026-07-31"
+      "value": 5.923,
+      "change_pct": -0.307,
+      "as_of": "2026-08-07"
     },
     "boj_balance_sheet": {
       "value": 6.443,
@@ -32,7 +32,7 @@
       "as_of": "2026-08-05"
     },
     "gli_index": {
-      "value": 19.133,
+      "value": 19.115,
       "change_pct": null,
       "as_of": "2026-08-05"
     },
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.205,
+      "value": 29.202,
       "change_pct": null,
       "as_of": "2026-06-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-08-07"
     },
     "dxy_index": {
-      "value": 99.80799865722656,
-      "change_pct": -0.002,
+      "value": 99.82499694824219,
+      "change_pct": 0.015,
       "as_of": "2026-08-11"
     },
     "fed_swap_lines": {
@@ -92,8 +92,8 @@
       "as_of": "2026-08-05"
     },
     "vix_index": {
-      "value": 15.239999771118164,
-      "change_pct": -1.423,
+      "value": 15.449999809265137,
+      "change_pct": -0.065,
       "as_of": "2026-08-11"
     },
     "move_index": {
@@ -102,24 +102,24 @@
       "as_of": "2026-08-10"
     },
     "gold_price": {
-      "value": 4456.0,
-      "change_pct": 2.16,
+      "value": 4443.5,
+      "change_pct": 1.873,
       "as_of": "2026-08-11"
     },
     "stablecoin_supply": {
-      "value": 306.38,
+      "value": 306.44,
       "change_pct": null,
       "as_of": "2026-08-11"
     },
     "btc_funding_rate": {
       "value": 0.01,
       "change_pct": null,
-      "as_of": "2026-08-11 16:00"
+      "as_of": "2026-08-12 00:00"
     },
     "btc_open_interest": {
-      "value": 2.097,
+      "value": 2.088,
       "change_pct": null,
-      "as_of": "2026-08-11 15:12"
+      "as_of": "2026-08-11 17:08"
     },
     "fear_greed_index": {
       "value": 29,
