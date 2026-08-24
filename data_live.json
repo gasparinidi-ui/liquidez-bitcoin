@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T19:38:03.388020+00:00",
+  "updated_at": "2026-08-24T20:43:08.031878+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.746,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.206,
+      "value": 29.208,
       "change_pct": null,
       "as_of": "2026-06-01"
     },
@@ -62,9 +62,9 @@
       "as_of": "2026-08-21"
     },
     "ust10y": {
-      "value": 4.69,
-      "change_pct": 0.86,
-      "as_of": "2026-08-20"
+      "value": 4.74,
+      "change_pct": 1.066,
+      "as_of": "2026-08-21"
     },
     "yield_curve_2s10s": {
       "value": 0.5,
@@ -77,13 +77,13 @@
       "as_of": "2026-08-21"
     },
     "real_yield_10y": {
-      "value": 2.35,
-      "change_pct": 0.0,
-      "as_of": "2026-08-20"
+      "value": 2.4,
+      "change_pct": 2.128,
+      "as_of": "2026-08-21"
     },
     "dxy_index": {
-      "value": 99.03299713134766,
-      "change_pct": 0.236,
+      "value": 99.00399780273438,
+      "change_pct": 0.206,
       "as_of": "2026-08-24"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-08-19"
     },
     "vix_index": {
-      "value": 15.779999732971191,
-      "change_pct": 4.296,
+      "value": 15.850000381469727,
+      "change_pct": 4.759,
       "as_of": "2026-08-24"
     },
     "move_index": {
-      "value": 73.4000015258789,
-      "change_pct": 0.301,
-      "as_of": "2026-08-21"
+      "value": 73.3988037109375,
+      "change_pct": -0.002,
+      "as_of": "2026-08-24"
     },
     "gold_price": {
-      "value": 4697.7001953125,
-      "change_pct": 1.592,
+      "value": 4705.2001953125,
+      "change_pct": 1.754,
       "as_of": "2026-08-24"
     },
     "stablecoin_supply": {
-      "value": 309.09,
+      "value": 309.04,
       "change_pct": null,
       "as_of": "2026-08-24"
     },
     "btc_funding_rate": {
-      "value": 0.0069,
+      "value": 0.0067,
       "change_pct": null,
       "as_of": "2026-08-25 00:00"
     },
     "btc_open_interest": {
-      "value": 2.319,
+      "value": 2.315,
       "change_pct": null,
-      "as_of": "2026-08-24 19:38"
+      "as_of": "2026-08-24 20:43"
     },
     "fear_greed_index": {
       "value": 73,
