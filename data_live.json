@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T19:40:39.116947+00:00",
+  "updated_at": "2026-08-25T20:40:11.215655+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.746,
@@ -62,9 +62,9 @@
       "as_of": "2026-08-24"
     },
     "ust10y": {
-      "value": 4.74,
-      "change_pct": 1.066,
-      "as_of": "2026-08-21"
+      "value": 4.7,
+      "change_pct": -0.844,
+      "as_of": "2026-08-24"
     },
     "yield_curve_2s10s": {
       "value": 0.46,
@@ -77,13 +77,13 @@
       "as_of": "2026-08-24"
     },
     "real_yield_10y": {
-      "value": 2.4,
-      "change_pct": 2.128,
-      "as_of": "2026-08-21"
+      "value": 2.38,
+      "change_pct": -0.833,
+      "as_of": "2026-08-24"
     },
     "dxy_index": {
-      "value": 98.91600036621094,
-      "change_pct": -0.085,
+      "value": 98.88300323486328,
+      "change_pct": -0.118,
       "as_of": "2026-08-25"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-08-19"
     },
     "vix_index": {
-      "value": 15.489999771118164,
-      "change_pct": -2.271,
+      "value": 15.449999809265137,
+      "change_pct": -2.524,
       "as_of": "2026-08-25"
     },
     "move_index": {
-      "value": 73.9800033569336,
-      "change_pct": 0.79,
-      "as_of": "2026-08-24"
+      "value": 73.97509765625,
+      "change_pct": -0.007,
+      "as_of": "2026-08-25"
     },
     "gold_price": {
-      "value": 4717.89990234375,
-      "change_pct": 1.661,
+      "value": 4720.0,
+      "change_pct": 1.707,
       "as_of": "2026-08-25"
     },
     "stablecoin_supply": {
-      "value": 310.37,
+      "value": 310.4,
       "change_pct": null,
       "as_of": "2026-08-25"
     },
     "btc_funding_rate": {
-      "value": 0.0021,
+      "value": 0.0015,
       "change_pct": null,
       "as_of": "2026-08-26 00:00"
     },
     "btc_open_interest": {
-      "value": 2.237,
+      "value": 2.218,
       "change_pct": null,
-      "as_of": "2026-08-25 19:40"
+      "as_of": "2026-08-25 20:40"
     },
     "fear_greed_index": {
       "value": 74,
