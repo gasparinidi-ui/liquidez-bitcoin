@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T23:24:14.709002+00:00",
+  "updated_at": "2026-08-27T09:32:13.544332+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.746,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.267,
+      "value": 29.26,
       "change_pct": null,
       "as_of": "2026-07-01"
     },
@@ -82,9 +82,9 @@
       "as_of": "2026-08-25"
     },
     "dxy_index": {
-      "value": 99.13400268554688,
-      "change_pct": 0.216,
-      "as_of": "2026-08-26"
+      "value": 99.20500183105469,
+      "change_pct": 0.035,
+      "as_of": "2026-08-27"
     },
     "fed_swap_lines": {
       "value": 123.0,
@@ -92,39 +92,39 @@
       "as_of": "2026-08-19"
     },
     "vix_index": {
-      "value": 15.210000038146973,
-      "change_pct": -1.553,
-      "as_of": "2026-08-26"
+      "value": 14.970000267028809,
+      "change_pct": -1.578,
+      "as_of": "2026-08-27"
     },
     "move_index": {
-      "value": 69.4375,
-      "change_pct": -3.452,
+      "value": 69.44000244140625,
+      "change_pct": -3.448,
       "as_of": "2026-08-26"
     },
     "gold_price": {
-      "value": 4667.5,
-      "change_pct": 0.634,
-      "as_of": "2026-08-26"
+      "value": 4649.2001953125,
+      "change_pct": 1.109,
+      "as_of": "2026-08-27"
     },
     "stablecoin_supply": {
-      "value": 310.61,
+      "value": 310.84,
       "change_pct": null,
-      "as_of": "2026-08-26"
+      "as_of": "2026-08-27"
     },
     "btc_funding_rate": {
-      "value": 0.0041,
+      "value": 0.003,
       "change_pct": null,
-      "as_of": "2026-08-27 00:00"
+      "as_of": "2026-08-27 16:00"
     },
     "btc_open_interest": {
-      "value": 2.279,
+      "value": 2.278,
       "change_pct": null,
-      "as_of": "2026-08-26 23:24"
+      "as_of": "2026-08-27 09:32"
     },
     "fear_greed_index": {
-      "value": 65,
-      "change_pct": -12.16,
-      "as_of": "2026-08-26"
+      "value": 71,
+      "change_pct": 9.23,
+      "as_of": "2026-08-27"
     }
   }
 }
