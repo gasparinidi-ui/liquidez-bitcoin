@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T16:20:47.824241+00:00",
+  "updated_at": "2026-09-03T19:45:33.878153+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.731,
@@ -17,9 +17,9 @@
       "as_of": "2026-08-01"
     },
     "reverse_repo": {
-      "value": 0.525,
-      "change_pct": -27.586,
-      "as_of": "2026-09-02"
+      "value": 0.702,
+      "change_pct": 33.714,
+      "as_of": "2026-09-03"
     },
     "tga_balance": {
       "value": 950.736,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.418,
+      "value": 29.402,
       "change_pct": null,
       "as_of": "2026-07-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-09-01"
     },
     "dxy_index": {
-      "value": 98.9520034790039,
-      "change_pct": -0.611,
+      "value": 99.00800323486328,
+      "change_pct": -0.554,
       "as_of": "2026-09-03"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-08-26"
     },
     "vix_index": {
-      "value": 14.680000305175781,
-      "change_pct": -3.421,
+      "value": 14.380000114440918,
+      "change_pct": -5.395,
       "as_of": "2026-09-03"
     },
     "move_index": {
-      "value": 79.70999908447266,
-      "change_pct": 2.35,
-      "as_of": "2026-09-02"
+      "value": 79.71330261230469,
+      "change_pct": 0.004,
+      "as_of": "2026-09-03"
     },
     "gold_price": {
-      "value": 4540.5,
-      "change_pct": 3.99,
+      "value": 4522.2998046875,
+      "change_pct": 3.573,
       "as_of": "2026-09-03"
     },
     "stablecoin_supply": {
-      "value": 309.81,
+      "value": 310.17,
       "change_pct": null,
       "as_of": "2026-09-03"
     },
     "btc_funding_rate": {
-      "value": 0.0043,
+      "value": 0.0044,
       "change_pct": null,
       "as_of": "2026-09-04 00:00"
     },
     "btc_open_interest": {
-      "value": 2.358,
+      "value": 2.402,
       "change_pct": null,
-      "as_of": "2026-09-03 16:20"
+      "as_of": "2026-09-03 19:45"
     },
     "fear_greed_index": {
       "value": 65,
