@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T16:33:40.616552+00:00",
+  "updated_at": "2026-09-08T19:52:21.784505+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.737,
@@ -17,9 +17,9 @@
       "as_of": "2026-08-01"
     },
     "reverse_repo": {
-      "value": 0.675,
-      "change_pct": -3.846,
-      "as_of": "2026-09-04"
+      "value": 0.626,
+      "change_pct": null,
+      "as_of": "2026-09-08"
     },
     "tga_balance": {
       "value": 967.935,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.462,
+      "value": 29.474,
       "change_pct": null,
       "as_of": "2026-07-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-09-03"
     },
     "dxy_index": {
-      "value": 98.91400146484375,
-      "change_pct": -0.248,
+      "value": 98.83000183105469,
+      "change_pct": -0.333,
       "as_of": "2026-09-08"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-09-02"
     },
     "vix_index": {
-      "value": 15.369999885559082,
-      "change_pct": 0.458,
+      "value": 15.539999961853027,
+      "change_pct": 1.569,
       "as_of": "2026-09-08"
     },
     "move_index": {
-      "value": 73.0999984741211,
-      "change_pct": -2.116,
-      "as_of": "2026-09-04"
+      "value": 73.10449981689453,
+      "change_pct": 0.006,
+      "as_of": "2026-09-08"
     },
     "gold_price": {
-      "value": 4436.5,
-      "change_pct": 0.151,
+      "value": 4411.7998046875,
+      "change_pct": -0.406,
       "as_of": "2026-09-08"
     },
     "stablecoin_supply": {
-      "value": 310.81,
+      "value": 311.07,
       "change_pct": null,
       "as_of": "2026-09-08"
     },
     "btc_funding_rate": {
-      "value": 0.0055,
+      "value": 0.0029,
       "change_pct": null,
       "as_of": "2026-09-09 00:00"
     },
     "btc_open_interest": {
-      "value": 2.225,
+      "value": 2.168,
       "change_pct": null,
-      "as_of": "2026-09-08 16:33"
+      "as_of": "2026-09-08 19:52"
     },
     "fear_greed_index": {
       "value": 69,
