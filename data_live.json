@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T13:59:11.709853+00:00",
+  "updated_at": "2026-09-21T19:19:59.051878+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.747,
@@ -17,9 +17,9 @@
       "as_of": "2026-08-01"
     },
     "reverse_repo": {
-      "value": 0.576,
-      "change_pct": 108.696,
-      "as_of": "2026-09-18"
+      "value": 0.582,
+      "change_pct": 1.042,
+      "as_of": "2026-09-21"
     },
     "tga_balance": {
       "value": 877.028,
@@ -72,9 +72,9 @@
       "as_of": "2026-09-18"
     },
     "hy_credit_spread": {
-      "value": 2.7,
-      "change_pct": 0.0,
-      "as_of": "2026-09-17"
+      "value": 2.68,
+      "change_pct": -0.741,
+      "as_of": "2026-09-18"
     },
     "real_yield_10y": {
       "value": 2.61,
@@ -82,8 +82,8 @@
       "as_of": "2026-09-17"
     },
     "dxy_index": {
-      "value": 100.34700012207031,
-      "change_pct": 0.127,
+      "value": 100.41999816894531,
+      "change_pct": 0.2,
       "as_of": "2026-09-21"
     },
     "fed_swap_lines": {
@@ -92,8 +92,8 @@
       "as_of": "2026-09-16"
     },
     "vix_index": {
-      "value": 14.920000076293945,
-      "change_pct": 0.743,
+      "value": 15.039999961853027,
+      "change_pct": 1.553,
       "as_of": "2026-09-21"
     },
     "move_index": {
@@ -102,24 +102,24 @@
       "as_of": "2026-09-18"
     },
     "gold_price": {
-      "value": 4390.7998046875,
-      "change_pct": -0.771,
+      "value": 4384.0,
+      "change_pct": -0.924,
       "as_of": "2026-09-21"
     },
     "stablecoin_supply": {
-      "value": 311.75,
+      "value": 312.0,
       "change_pct": null,
       "as_of": "2026-09-21"
     },
     "btc_funding_rate": {
-      "value": 0.0064,
+      "value": 0.0039,
       "change_pct": null,
-      "as_of": "2026-09-21 16:00"
+      "as_of": "2026-09-22 00:00"
     },
     "btc_open_interest": {
-      "value": 2.563,
+      "value": 2.677,
       "change_pct": null,
-      "as_of": "2026-09-21 13:59"
+      "as_of": "2026-09-21 19:19"
     },
     "fear_greed_index": {
       "value": 70,
