@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T13:39:58.778830+00:00",
+  "updated_at": "2026-09-25T18:31:21.056881+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.748,
@@ -17,9 +17,9 @@
       "as_of": "2026-08-01"
     },
     "reverse_repo": {
-      "value": 0.63,
-      "change_pct": 36.659,
-      "as_of": "2026-09-24"
+      "value": 0.576,
+      "change_pct": -8.571,
+      "as_of": "2026-09-25"
     },
     "tga_balance": {
       "value": 977.084,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.477,
+      "value": 29.47,
       "change_pct": null,
       "as_of": "2026-08-01"
     },
@@ -72,9 +72,9 @@
       "as_of": "2026-09-24"
     },
     "hy_credit_spread": {
-      "value": 2.73,
-      "change_pct": 1.866,
-      "as_of": "2026-09-23"
+      "value": 2.8,
+      "change_pct": 2.564,
+      "as_of": "2026-09-24"
     },
     "real_yield_10y": {
       "value": 2.76,
@@ -82,8 +82,8 @@
       "as_of": "2026-09-23"
     },
     "dxy_index": {
-      "value": 100.97000122070312,
-      "change_pct": -0.316,
+      "value": 101.03399658203125,
+      "change_pct": -0.253,
       "as_of": "2026-09-25"
     },
     "fed_swap_lines": {
@@ -92,8 +92,8 @@
       "as_of": "2026-09-23"
     },
     "vix_index": {
-      "value": 15.25,
-      "change_pct": -2.68,
+      "value": 14.960000038146973,
+      "change_pct": -4.531,
       "as_of": "2026-09-25"
     },
     "move_index": {
@@ -102,24 +102,24 @@
       "as_of": "2026-09-24"
     },
     "gold_price": {
-      "value": 4314.0,
-      "change_pct": 0.372,
+      "value": 4322.60009765625,
+      "change_pct": 0.572,
       "as_of": "2026-09-25"
     },
     "stablecoin_supply": {
-      "value": 312.1,
+      "value": 312.75,
       "change_pct": null,
       "as_of": "2026-09-25"
     },
     "btc_funding_rate": {
-      "value": 0.0054,
+      "value": 0.0027,
       "change_pct": null,
-      "as_of": "2026-09-25 16:00"
+      "as_of": "2026-09-26 00:00"
     },
     "btc_open_interest": {
-      "value": 2.403,
+      "value": 2.398,
       "change_pct": null,
-      "as_of": "2026-09-25 13:39"
+      "as_of": "2026-09-25 18:31"
     },
     "fear_greed_index": {
       "value": 71,
