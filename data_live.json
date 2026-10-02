@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T19:12:10.415743+00:00",
+  "updated_at": "2026-10-02T23:43:53.321518+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.743,
@@ -62,14 +62,14 @@
       "as_of": "2026-10-01"
     },
     "ust10y": {
-      "value": 5.29,
-      "change_pct": 0.57,
-      "as_of": "2026-09-30"
+      "value": 5.24,
+      "change_pct": -0.945,
+      "as_of": "2026-10-01"
     },
     "yield_curve_2s10s": {
-      "value": 0.46,
-      "change_pct": 12.195,
-      "as_of": "2026-10-01"
+      "value": 0.45,
+      "change_pct": -2.174,
+      "as_of": "2026-10-02"
     },
     "hy_credit_spread": {
       "value": 3.24,
@@ -77,13 +77,13 @@
       "as_of": "2026-10-01"
     },
     "real_yield_10y": {
-      "value": 2.93,
-      "change_pct": 0.687,
-      "as_of": "2026-09-30"
+      "value": 2.88,
+      "change_pct": -1.706,
+      "as_of": "2026-10-01"
     },
     "dxy_index": {
-      "value": 101.93800354003906,
-      "change_pct": -0.159,
+      "value": 101.92400360107422,
+      "change_pct": -0.172,
       "as_of": "2026-10-02"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-09-30"
     },
     "vix_index": {
-      "value": 15.5600004196167,
-      "change_pct": -5.064,
+      "value": 15.3100004196167,
+      "change_pct": -6.589,
       "as_of": "2026-10-02"
     },
     "move_index": {
-      "value": 107.63390350341797,
-      "change_pct": -0.459,
+      "value": 107.28679656982422,
+      "change_pct": -0.78,
       "as_of": "2026-10-02"
     },
     "gold_price": {
-      "value": 4176.2001953125,
-      "change_pct": -0.621,
+      "value": 4172.10009765625,
+      "change_pct": -0.719,
       "as_of": "2026-10-02"
     },
     "stablecoin_supply": {
-      "value": 313.18,
+      "value": 312.48,
       "change_pct": null,
       "as_of": "2026-10-02"
     },
     "btc_funding_rate": {
-      "value": 0.0084,
+      "value": -0.0,
       "change_pct": null,
       "as_of": "2026-10-03 00:00"
     },
     "btc_open_interest": {
-      "value": 2.411,
+      "value": 2.418,
       "change_pct": null,
-      "as_of": "2026-10-02 19:12"
+      "as_of": "2026-10-02 23:43"
     },
     "fear_greed_index": {
       "value": 72,
