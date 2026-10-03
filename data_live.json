@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T19:48:25.029706+00:00",
+  "updated_at": "2026-10-03T22:50:35.586433+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.743,
@@ -112,14 +112,14 @@
       "as_of": "2026-10-03"
     },
     "btc_funding_rate": {
-      "value": 0.0051,
+      "value": 0.0033,
       "change_pct": null,
       "as_of": "2026-10-04 00:00"
     },
     "btc_open_interest": {
-      "value": 2.414,
+      "value": 2.409,
       "change_pct": null,
-      "as_of": "2026-10-03 19:48"
+      "as_of": "2026-10-03 22:50"
     },
     "fear_greed_index": {
       "value": 67,
