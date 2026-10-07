@@ -1,20 +1,10 @@
 {
-  "updated_at": "2026-10-07T07:09:59.379402+00:00",
+  "updated_at": "2026-10-07T15:30:37.909983+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.743,
       "change_pct": -0.069,
       "as_of": "2026-09-30"
-    },
-    "ecb_balance_sheet": {
-      "value": 5.897,
-      "change_pct": -0.021,
-      "as_of": "2026-09-25"
-    },
-    "boj_balance_sheet": {
-      "value": 6.447,
-      "change_pct": 0.057,
-      "as_of": "2026-08-01"
     },
     "reverse_repo": {
       "value": 0.414,
@@ -31,11 +21,6 @@
       "change_pct": null,
       "as_of": "2026-09-30"
     },
-    "gli_index": {
-      "value": 19.087,
-      "change_pct": null,
-      "as_of": "2026-09-30"
-    },
     "us_m2": {
       "value": 23.343,
       "change_pct": 0.538,
@@ -47,7 +32,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.425,
+      "value": 29.433,
       "change_pct": null,
       "as_of": "2026-08-01"
     },
@@ -57,9 +42,9 @@
       "as_of": "2026-09-01"
     },
     "sofr_rate": {
-      "value": 3.89,
-      "change_pct": 0.258,
-      "as_of": "2026-10-05"
+      "value": 3.9,
+      "change_pct": 0.257,
+      "as_of": "2026-10-06"
     },
     "ust10y": {
       "value": 5.31,
@@ -82,8 +67,8 @@
       "as_of": "2026-10-05"
     },
     "dxy_index": {
-      "value": 102.06900024414062,
-      "change_pct": 0.235,
+      "value": 102.3239974975586,
+      "change_pct": 0.485,
       "as_of": "2026-10-07"
     },
     "fed_swap_lines": {
@@ -92,34 +77,34 @@
       "as_of": "2026-09-30"
     },
     "vix_index": {
-      "value": 15.010000228881836,
-      "change_pct": -3.286,
-      "as_of": "2026-10-06"
+      "value": 15.579999923706055,
+      "change_pct": 3.797,
+      "as_of": "2026-10-07"
     },
     "move_index": {
-      "value": 105.19999694824219,
-      "change_pct": -7.394,
-      "as_of": "2026-10-06"
+      "value": 105.9937973022461,
+      "change_pct": 0.755,
+      "as_of": "2026-10-07"
     },
     "gold_price": {
-      "value": 4156.89990234375,
-      "change_pct": -0.721,
+      "value": 4128.7001953125,
+      "change_pct": -1.395,
       "as_of": "2026-10-07"
     },
     "stablecoin_supply": {
-      "value": 314.95,
+      "value": 314.79,
       "change_pct": null,
       "as_of": "2026-10-07"
     },
     "btc_funding_rate": {
-      "value": 0.0036,
+      "value": 0.0017,
       "change_pct": null,
-      "as_of": "2026-10-07 08:00"
+      "as_of": "2026-10-07 16:00"
     },
     "btc_open_interest": {
-      "value": 2.577,
+      "value": 2.549,
       "change_pct": null,
-      "as_of": "2026-10-07 07:09"
+      "as_of": "2026-10-07 15:30"
     },
     "fear_greed_index": {
       "value": 71,
