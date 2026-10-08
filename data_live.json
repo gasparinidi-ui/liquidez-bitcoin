@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T21:14:48.076088+00:00",
+  "updated_at": "2026-10-08T01:51:03.551593+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.743,
@@ -12,9 +12,9 @@
       "as_of": "2026-09-25"
     },
     "boj_balance_sheet": {
-      "value": 6.447,
-      "change_pct": 0.057,
-      "as_of": "2026-08-01"
+      "value": 6.25,
+      "change_pct": -3.046,
+      "as_of": "2026-09-01"
     },
     "reverse_repo": {
       "value": 2.338,
@@ -32,7 +32,7 @@
       "as_of": "2026-09-30"
     },
     "gli_index": {
-      "value": 19.087,
+      "value": 18.89,
       "change_pct": null,
       "as_of": "2026-09-30"
     },
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.438,
+      "value": 29.445,
       "change_pct": null,
       "as_of": "2026-08-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-10-06"
     },
     "dxy_index": {
-      "value": 102.26000213623047,
-      "change_pct": 0.422,
+      "value": 102.21800231933594,
+      "change_pct": 0.381,
       "as_of": "2026-10-07"
     },
     "fed_swap_lines": {
@@ -102,29 +102,29 @@
       "as_of": "2026-10-07"
     },
     "gold_price": {
-      "value": 4136.7001953125,
-      "change_pct": -1.204,
+      "value": 4157.60009765625,
+      "change_pct": -0.705,
       "as_of": "2026-10-07"
     },
     "stablecoin_supply": {
-      "value": 314.32,
+      "value": 313.71,
       "change_pct": null,
-      "as_of": "2026-10-07"
+      "as_of": "2026-10-08"
     },
     "btc_funding_rate": {
-      "value": 0.0056,
+      "value": 0.0078,
       "change_pct": null,
-      "as_of": "2026-10-08 00:00"
+      "as_of": "2026-10-08 08:00"
     },
     "btc_open_interest": {
-      "value": 2.525,
+      "value": 2.563,
       "change_pct": null,
-      "as_of": "2026-10-07 21:14"
+      "as_of": "2026-10-08 01:51"
     },
     "fear_greed_index": {
-      "value": 71,
-      "change_pct": -2.74,
-      "as_of": "2026-10-07"
+      "value": 64,
+      "change_pct": -9.86,
+      "as_of": "2026-10-08"
     }
   }
 }
