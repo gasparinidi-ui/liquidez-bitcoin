@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T07:20:20.263745+00:00",
+  "updated_at": "2026-10-15T13:21:06.273383+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.748,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.44,
+      "value": 29.448,
       "change_pct": null,
       "as_of": "2026-08-01"
     },
@@ -57,9 +57,9 @@
       "as_of": "2026-09-01"
     },
     "sofr_rate": {
-      "value": 3.89,
-      "change_pct": null,
-      "as_of": "2026-10-13"
+      "value": 3.88,
+      "change_pct": -0.257,
+      "as_of": "2026-10-14"
     },
     "ust10y": {
       "value": 5.21,
@@ -82,8 +82,8 @@
       "as_of": "2026-10-13"
     },
     "dxy_index": {
-      "value": 102.10600280761719,
-      "change_pct": -0.433,
+      "value": 102.12799835205078,
+      "change_pct": -0.412,
       "as_of": "2026-10-15"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-10-07"
     },
     "vix_index": {
-      "value": 16.8700008392334,
-      "change_pct": 10.478,
-      "as_of": "2026-10-14"
+      "value": 17.440000534057617,
+      "change_pct": 3.379,
+      "as_of": "2026-10-15"
     },
     "move_index": {
-      "value": 99.05999755859375,
-      "change_pct": -2.008,
-      "as_of": "2026-10-14"
+      "value": 101.79429626464844,
+      "change_pct": 2.76,
+      "as_of": "2026-10-15"
     },
     "gold_price": {
-      "value": 4163.2001953125,
-      "change_pct": 1.346,
+      "value": 4168.2001953125,
+      "change_pct": 1.468,
       "as_of": "2026-10-15"
     },
     "stablecoin_supply": {
-      "value": 306.75,
+      "value": 306.51,
       "change_pct": null,
       "as_of": "2026-10-15"
     },
     "btc_funding_rate": {
-      "value": 0.0061,
+      "value": 0.0038,
       "change_pct": null,
-      "as_of": "2026-10-15 08:00"
+      "as_of": "2026-10-15 16:00"
     },
     "btc_open_interest": {
       "value": 2.478,
       "change_pct": null,
-      "as_of": "2026-10-15 07:20"
+      "as_of": "2026-10-15 13:21"
     },
     "fear_greed_index": {
       "value": 53,
