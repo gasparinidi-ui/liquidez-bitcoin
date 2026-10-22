@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T15:12:52.529947+00:00",
+  "updated_at": "2026-10-22T20:00:36.063456+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.756,
@@ -17,9 +17,9 @@
       "as_of": "2026-09-01"
     },
     "reverse_repo": {
-      "value": 0.237,
-      "change_pct": 4.405,
-      "as_of": "2026-10-21"
+      "value": 0.351,
+      "change_pct": 48.101,
+      "as_of": "2026-10-22"
     },
     "tga_balance": {
       "value": 883.373,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.473,
+      "value": 29.483,
       "change_pct": null,
       "as_of": "2026-08-01"
     },
@@ -82,8 +82,8 @@
       "as_of": "2026-10-20"
     },
     "dxy_index": {
-      "value": 101.83999633789062,
-      "change_pct": 0.059,
+      "value": 101.63600158691406,
+      "change_pct": -0.141,
       "as_of": "2026-10-22"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-10-14"
     },
     "vix_index": {
-      "value": 19.34000015258789,
-      "change_pct": 15.947,
+      "value": 19.690000534057617,
+      "change_pct": 18.046,
       "as_of": "2026-10-22"
     },
     "move_index": {
-      "value": 102.88009643554688,
-      "change_pct": 7.234,
+      "value": 106.03620147705078,
+      "change_pct": 10.523,
       "as_of": "2026-10-22"
     },
     "gold_price": {
-      "value": 4076.300048828125,
-      "change_pct": -1.776,
+      "value": 4040.5,
+      "change_pct": -2.639,
       "as_of": "2026-10-22"
     },
     "stablecoin_supply": {
-      "value": 305.52,
+      "value": 305.25,
       "change_pct": null,
       "as_of": "2026-10-22"
     },
     "btc_funding_rate": {
-      "value": 0.0078,
+      "value": 0.0094,
       "change_pct": null,
-      "as_of": "2026-10-22 16:00"
+      "as_of": "2026-10-23 00:00"
     },
     "btc_open_interest": {
-      "value": 2.481,
+      "value": 2.513,
       "change_pct": null,
-      "as_of": "2026-10-22 15:12"
+      "as_of": "2026-10-22 20:00"
     },
     "fear_greed_index": {
       "value": 68,
