@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T19:06:46.139720+00:00",
+  "updated_at": "2026-10-23T23:04:25.948224+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.754,
@@ -62,14 +62,14 @@
       "as_of": "2026-10-22"
     },
     "ust10y": {
-      "value": 5.13,
-      "change_pct": 0.195,
-      "as_of": "2026-10-21"
+      "value": 4.96,
+      "change_pct": -3.314,
+      "as_of": "2026-10-22"
     },
     "yield_curve_2s10s": {
       "value": 0.31,
-      "change_pct": -3.125,
-      "as_of": "2026-10-22"
+      "change_pct": 0.0,
+      "as_of": "2026-10-23"
     },
     "hy_credit_spread": {
       "value": 3.4,
@@ -77,13 +77,13 @@
       "as_of": "2026-10-22"
     },
     "real_yield_10y": {
-      "value": 2.76,
-      "change_pct": -0.361,
-      "as_of": "2026-10-21"
+      "value": 2.64,
+      "change_pct": -4.348,
+      "as_of": "2026-10-22"
     },
     "dxy_index": {
-      "value": 101.81199645996094,
-      "change_pct": 0.199,
+      "value": 101.75199890136719,
+      "change_pct": 0.14,
       "as_of": "2026-10-23"
     },
     "fed_swap_lines": {
@@ -92,22 +92,22 @@
       "as_of": "2026-10-21"
     },
     "vix_index": {
-      "value": 19.93000030517578,
-      "change_pct": 4.729,
+      "value": 19.450000762939453,
+      "change_pct": 2.207,
       "as_of": "2026-10-23"
     },
     "move_index": {
-      "value": 103.2261962890625,
-      "change_pct": -3.382,
+      "value": 103.31230163574219,
+      "change_pct": -3.302,
       "as_of": "2026-10-23"
     },
     "gold_price": {
-      "value": 4009.89990234375,
-      "change_pct": -1.244,
+      "value": 4010.0,
+      "change_pct": -1.241,
       "as_of": "2026-10-23"
     },
     "stablecoin_supply": {
-      "value": 304.53,
+      "value": 304.41,
       "change_pct": null,
       "as_of": "2026-10-23"
     },
@@ -117,9 +117,9 @@
       "as_of": "2026-10-24 00:00"
     },
     "btc_open_interest": {
-      "value": 2.491,
+      "value": 2.479,
       "change_pct": null,
-      "as_of": "2026-10-23 19:06"
+      "as_of": "2026-10-23 23:04"
     },
     "fear_greed_index": {
       "value": 50,
