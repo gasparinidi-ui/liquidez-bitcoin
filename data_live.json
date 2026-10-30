@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T07:01:22.064814+00:00",
+  "updated_at": "2026-10-30T14:02:19.374766+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.746,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.523,
+      "value": 29.536,
       "change_pct": null,
       "as_of": "2026-09-01"
     },
@@ -58,8 +58,8 @@
     },
     "sofr_rate": {
       "value": 3.94,
-      "change_pct": -0.253,
-      "as_of": "2026-10-28"
+      "change_pct": 0.0,
+      "as_of": "2026-10-29"
     },
     "ust10y": {
       "value": 5.05,
@@ -82,8 +82,8 @@
       "as_of": "2026-10-28"
     },
     "dxy_index": {
-      "value": 101.84600067138672,
-      "change_pct": -0.19,
+      "value": 101.99400329589844,
+      "change_pct": -0.045,
       "as_of": "2026-10-30"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-10-28"
     },
     "vix_index": {
-      "value": 17.200000762939453,
-      "change_pct": 1.715,
-      "as_of": "2026-10-29"
+      "value": 18.899999618530273,
+      "change_pct": 9.884,
+      "as_of": "2026-10-30"
     },
     "move_index": {
-      "value": 93.54000091552734,
-      "change_pct": -1.068,
-      "as_of": "2026-10-29"
+      "value": 97.18990325927734,
+      "change_pct": 3.902,
+      "as_of": "2026-10-30"
     },
     "gold_price": {
-      "value": 3993.60009765625,
-      "change_pct": -0.938,
+      "value": 3926.5,
+      "change_pct": -2.602,
       "as_of": "2026-10-30"
     },
     "stablecoin_supply": {
-      "value": 300.48,
+      "value": 300.7,
       "change_pct": null,
       "as_of": "2026-10-30"
     },
     "btc_funding_rate": {
-      "value": 0.0088,
+      "value": 0.01,
       "change_pct": null,
-      "as_of": "2026-10-30 08:00"
+      "as_of": "2026-10-30 16:00"
     },
     "btc_open_interest": {
-      "value": 2.642,
+      "value": 2.619,
       "change_pct": null,
-      "as_of": "2026-10-30 07:01"
+      "as_of": "2026-10-30 14:02"
     },
     "fear_greed_index": {
       "value": 30,
