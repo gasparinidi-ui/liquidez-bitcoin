@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T06:36:49.115788+00:00",
+  "updated_at": "2026-11-03T15:01:26.603455+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.746,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.517,
+      "value": 29.497,
       "change_pct": null,
       "as_of": "2026-09-01"
     },
@@ -58,8 +58,8 @@
     },
     "sofr_rate": {
       "value": 3.95,
-      "change_pct": 0.254,
-      "as_of": "2026-10-30"
+      "change_pct": 0.0,
+      "as_of": "2026-11-02"
     },
     "ust10y": {
       "value": 4.94,
@@ -82,8 +82,8 @@
       "as_of": "2026-10-30"
     },
     "dxy_index": {
-      "value": 101.72599792480469,
-      "change_pct": -0.024,
+      "value": 101.76699829101562,
+      "change_pct": 0.017,
       "as_of": "2026-11-03"
     },
     "fed_swap_lines": {
@@ -92,34 +92,34 @@
       "as_of": "2026-10-28"
     },
     "vix_index": {
-      "value": 21.149999618530273,
-      "change_pct": 8.908,
-      "as_of": "2026-11-02"
+      "value": 20.81999969482422,
+      "change_pct": -1.56,
+      "as_of": "2026-11-03"
     },
     "move_index": {
-      "value": 100.36000061035156,
-      "change_pct": 0.16,
-      "as_of": "2026-11-02"
+      "value": 99.82109832763672,
+      "change_pct": -0.537,
+      "as_of": "2026-11-03"
     },
     "gold_price": {
-      "value": 3930.89990234375,
-      "change_pct": -0.975,
+      "value": 3955.699951171875,
+      "change_pct": -0.35,
       "as_of": "2026-11-03"
     },
     "stablecoin_supply": {
-      "value": 297.57,
+      "value": 296.47,
       "change_pct": null,
       "as_of": "2026-11-03"
     },
     "btc_funding_rate": {
       "value": 0.01,
       "change_pct": null,
-      "as_of": "2026-11-03 08:00"
+      "as_of": "2026-11-03 16:00"
     },
     "btc_open_interest": {
-      "value": 2.618,
+      "value": 2.575,
       "change_pct": null,
-      "as_of": "2026-11-03 06:36"
+      "as_of": "2026-11-03 15:01"
     },
     "fear_greed_index": {
       "value": 26,
