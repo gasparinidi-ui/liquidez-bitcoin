@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-05T15:23:08.760908+00:00",
+  "updated_at": "2026-11-05T21:56:07.273079+00:00",
   "metrics": {
     "fed_balance_sheet": {
-      "value": 6.746,
-      "change_pct": -0.118,
-      "as_of": "2026-10-28"
+      "value": 6.748,
+      "change_pct": 0.037,
+      "as_of": "2026-11-04"
     },
     "ecb_balance_sheet": {
       "value": 5.945,
@@ -17,24 +17,24 @@
       "as_of": "2026-10-01"
     },
     "reverse_repo": {
-      "value": 0.225,
-      "change_pct": -47.307,
-      "as_of": "2026-11-04"
+      "value": 0.125,
+      "change_pct": -44.444,
+      "as_of": "2026-11-05"
     },
     "tga_balance": {
-      "value": 999.727,
-      "change_pct": 5.013,
-      "as_of": "2026-10-28"
+      "value": 957.175,
+      "change_pct": -4.256,
+      "as_of": "2026-11-04"
     },
     "fed_net_liquidity": {
-      "value": 5.746,
+      "value": 5.791,
       "change_pct": null,
-      "as_of": "2026-10-28"
+      "as_of": "2026-11-04"
     },
     "gli_index": {
-      "value": 18.953,
+      "value": 18.955,
       "change_pct": null,
-      "as_of": "2026-10-28"
+      "as_of": "2026-11-04"
     },
     "us_m2": {
       "value": 23.414,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.51,
+      "value": 29.521,
       "change_pct": null,
       "as_of": "2026-09-01"
     },
@@ -62,9 +62,9 @@
       "as_of": "2026-11-04"
     },
     "ust10y": {
-      "value": 4.95,
-      "change_pct": 0.815,
-      "as_of": "2026-11-03"
+      "value": 4.9,
+      "change_pct": -1.01,
+      "as_of": "2026-11-04"
     },
     "yield_curve_2s10s": {
       "value": 0.32,
@@ -77,49 +77,49 @@
       "as_of": "2026-11-04"
     },
     "real_yield_10y": {
-      "value": 2.65,
-      "change_pct": 1.145,
-      "as_of": "2026-11-03"
+      "value": 2.64,
+      "change_pct": -0.377,
+      "as_of": "2026-11-04"
     },
     "dxy_index": {
-      "value": 101.5979995727539,
-      "change_pct": 0.087,
+      "value": 101.60399627685547,
+      "change_pct": 0.093,
       "as_of": "2026-11-05"
     },
     "fed_swap_lines": {
-      "value": 156.0,
-      "change_pct": -8.235,
-      "as_of": "2026-10-28"
+      "value": 169.0,
+      "change_pct": 8.333,
+      "as_of": "2026-11-04"
     },
     "vix_index": {
-      "value": 21.239999771118164,
-      "change_pct": 27.875,
+      "value": 28.18000030517578,
+      "change_pct": 69.657,
       "as_of": "2026-11-05"
     },
     "move_index": {
-      "value": 89.8917007446289,
-      "change_pct": -4.248,
+      "value": 97.92220306396484,
+      "change_pct": 4.306,
       "as_of": "2026-11-05"
     },
     "gold_price": {
-      "value": 4123.89990234375,
-      "change_pct": 1.25,
+      "value": 4096.5,
+      "change_pct": 0.577,
       "as_of": "2026-11-05"
     },
     "stablecoin_supply": {
-      "value": 295.2,
+      "value": 293.86,
       "change_pct": null,
       "as_of": "2026-11-05"
     },
     "btc_funding_rate": {
-      "value": 0.01,
+      "value": 0.0061,
       "change_pct": null,
-      "as_of": "2026-11-05 16:00"
+      "as_of": "2026-11-06 00:00"
     },
     "btc_open_interest": {
-      "value": 2.508,
+      "value": 2.634,
       "change_pct": null,
-      "as_of": "2026-11-05 15:23"
+      "as_of": "2026-11-05 21:56"
     },
     "fear_greed_index": {
       "value": 50,
