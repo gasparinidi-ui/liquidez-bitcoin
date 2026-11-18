@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T04:11:35.632114+00:00",
+  "updated_at": "2026-11-18T13:50:50.300451+00:00",
   "metrics": {
     "fed_balance_sheet": {
       "value": 6.759,
@@ -47,7 +47,7 @@
       "as_of": "2017-02-01"
     },
     "m2_global_g4": {
-      "value": 29.458,
+      "value": 29.459,
       "change_pct": null,
       "as_of": "2026-09-01"
     },
@@ -57,9 +57,9 @@
       "as_of": "2026-10-01"
     },
     "sofr_rate": {
-      "value": 3.93,
-      "change_pct": 0.769,
-      "as_of": "2026-11-16"
+      "value": 3.92,
+      "change_pct": -0.254,
+      "as_of": "2026-11-17"
     },
     "ust10y": {
       "value": 5.12,
@@ -82,9 +82,9 @@
       "as_of": "2026-11-16"
     },
     "dxy_index": {
-      "value": 103.62100219726562,
-      "change_pct": 0.069,
-      "as_of": "2026-11-17"
+      "value": 103.75900268554688,
+      "change_pct": 0.26,
+      "as_of": "2026-11-18"
     },
     "fed_swap_lines": {
       "value": 171.0,
@@ -92,9 +92,9 @@
       "as_of": "2026-11-11"
     },
     "vix_index": {
-      "value": 25.459999084472656,
-      "change_pct": 11.131,
-      "as_of": "2026-11-17"
+      "value": 24.31999969482422,
+      "change_pct": -4.478,
+      "as_of": "2026-11-18"
     },
     "move_index": {
       "value": 101.87999725341797,
@@ -102,24 +102,24 @@
       "as_of": "2026-11-17"
     },
     "gold_price": {
-      "value": 3788.800048828125,
-      "change_pct": -1.666,
-      "as_of": "2026-11-17"
+      "value": 3784.5,
+      "change_pct": -2.063,
+      "as_of": "2026-11-18"
     },
     "stablecoin_supply": {
-      "value": 286.95,
+      "value": 287.29,
       "change_pct": null,
       "as_of": "2026-11-18"
     },
     "btc_funding_rate": {
-      "value": 0.0031,
+      "value": 0.0008,
       "change_pct": null,
-      "as_of": "2026-11-18 08:00"
+      "as_of": "2026-11-18 16:00"
     },
     "btc_open_interest": {
-      "value": 1.985,
+      "value": 2.066,
       "change_pct": null,
-      "as_of": "2026-11-18 04:11"
+      "as_of": "2026-11-18 13:50"
     },
     "fear_greed_index": {
       "value": 11,
